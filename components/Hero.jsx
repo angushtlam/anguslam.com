@@ -1,5 +1,4 @@
 import * as React from "react";
-import Image from "next/image";
 import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
@@ -32,8 +31,8 @@ export default function Hero() {
           </h1>
         </div>
         <div className="flex flex-1">
-          <div className="flex items-center p-4 mb-8 w-full">
-            <div className="mx-auto max-w-screen-sm">
+          <div className="flex items-center p-4 w-full">
+            <div className="mx-auto max-w-screen-md">
               <div className="md:flex">
                 <div className="border border-white flex-1">
                   <h2 className="font-black p-2 text-white title-bg">About</h2>
@@ -47,7 +46,7 @@ export default function Hero() {
                       <ul className="list-disc ml-6">
                         <li>
                           <a
-                            className="text-blue-400 underline"
+                            className="text-blue-300 underline"
                             href="https://twitter.com/angushtlam"
                             rel="noreferrer"
                             target="_blank"
@@ -57,7 +56,7 @@ export default function Hero() {
                         </li>
                         <li>
                           <a
-                            className="text-blue-400 underline"
+                            className="text-blue-300 underline"
                             href="https://github.com/angushtlam"
                             rel="noreferrer"
                             target="_blank"
@@ -67,7 +66,7 @@ export default function Hero() {
                         </li>
                         <li>
                           <a
-                            className="text-blue-400 underline"
+                            className="text-blue-300 underline"
                             href="https://linkedin.com/in/angushtlam"
                             rel="noreferrer"
                             target="_blank"
@@ -87,23 +86,23 @@ export default function Hero() {
                   <div className="p-2 space-y-2">
                     <a className="flex space-x-2 text-white" href="#">
                       <div className="bg-white h-20 flex-1 max-w-1/2"></div>
-                      <p className="flex-1 text-blue-400 underline">
+                      <p className="flex-1 text-blue-300 underline">
                         Netscrape
                       </p>
                     </a>
                     <a className="flex space-x-2 text-white" href="#">
                       <div className="bg-white h-20 flex-1 max-w-1/2"></div>
-                      <p className="flex-1 text-blue-400 underline">Ghosts</p>
+                      <p className="flex-1 text-blue-300 underline">Ghosts</p>
                     </a>
                     <a className="flex space-x-2 text-white" href="#">
                       <div className="bg-white h-20 flex-1 max-w-1/2"></div>
-                      <p className="flex-1 text-blue-400 underline">
+                      <p className="flex-1 text-blue-300 underline">
                         Self-regulating hydroponics
                       </p>
                     </a>
                   </div>
                   <div className="pb-2 px-2">
-                    <a className="text-blue-400 underline" href="#">
+                    <a className="text-blue-300 underline" href="#">
                       More…
                     </a>
                   </div>
@@ -118,22 +117,22 @@ export default function Hero() {
                   <div className="p-2 text-white">
                     <ul className="list-disc ml-6">
                       <li>
-                        <a className="text-blue-400 underline" href="#">
+                        <a className="text-blue-300 underline" href="#">
                           Running a student tech community
                         </a>
                       </li>
                       <li>
-                        <a className="text-blue-400 underline" href="#">
+                        <a className="text-blue-300 underline" href="#">
                           Gotchas for web developers trying out React Native
                         </a>
                       </li>
                       <li>
-                        <a className="text-blue-400 underline" href="#">
+                        <a className="text-blue-300 underline" href="#">
                           The case for plain CSS
                         </a>
                       </li>
                       <li>
-                        <a className="text-blue-400 underline" href="#">
+                        <a className="text-blue-300 underline" href="#">
                           More…
                         </a>
                       </li>
