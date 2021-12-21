@@ -27,20 +27,23 @@ export default function Hero() {
       <div className="h-full flex flex-1 flex-col z-20">
         <div className="align-center border-white border-t-8 flex mb-8 w-full">
           <h1 className="font-black lowercase text-orientation-mixed text-white text-4xl px-8 pt-8">
-            Angus Lam
+            <a href="/">Angus Lam</a>
           </h1>
         </div>
         <div className="flex flex-1">
           <div className="flex items-center p-4 w-full">
             <div className="mx-auto max-w-screen-md">
               <div className="md:flex">
-                <div className="border border-white flex-1">
+                <div className="border border-white flex-2">
                   <h2 className="font-black p-2 text-white title-bg">About</h2>
                   <div className="border-b border-white"></div>
                   <div className="p-2">
-                    <p className="text-white mb-6">
+                    <p className="text-white mb-4">
                       Full stack software engineer with an affinity for building
                       products. Currently at Stripe.
+                    </p>
+                    <p className="text-white">
+                      Find me at:
                     </p>
                     <div className="text-white">
                       <ul className="list-disc ml-6">
@@ -78,8 +81,8 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-                <div className="border-b border-r md:border-t border-l md:border-l-0 border-white flex-2">
-                  <h2 className="font-black p-2 text-white title-bg">
+                <div className="md:border-b border-r md:border-t border-l md:border-l-0 border-white rounded-tr-full flex-1">
+                  {/* <h2 className="font-black p-2 text-white title-bg">
                     Portfolio
                   </h2>
                   <div className="border-b border-white"></div>
@@ -105,7 +108,7 @@ export default function Hero() {
                     <a className="text-blue-300 underline" href="#">
                       More…
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="border-b border-l border-r border-white flex">

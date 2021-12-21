@@ -39,25 +39,25 @@ const fragmentShader = glsl`
 
     vec3 color = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.05,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.25,
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.2,
       abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.15
     );
     
     vec3 color2 = vec3(
-      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.1,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.25,
+      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.075,
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.175,
       abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.25
     );
     
     vec3 color3 = vec3(
-      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.2,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.45,
+      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.1,
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.15,
       abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.35
     );
     
     vec3 color4 = vec3(
-      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.3,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.25,
+      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.15,
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.1,
       abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.45
     );
     
@@ -85,7 +85,7 @@ const fragmentShader = glsl`
       color = color3;
     }
     
-    if (uv.y > y3 + 0.45) {
+    if (uv.y > y3 + 0.5) {
       color = color4;
     }
     
