@@ -24,13 +24,13 @@ const fragmentShader = glsl`
     vec2 uv = v_uv;
 
     float wave_primary_color_ceiling = 0.15;
-    float wave_primary_speed = 0.5 * time;
+    float wave_primary_speed = 0.25 * time;
     float wave_primary_position_y_val_sin = sin(
       uv.x + wave_primary_speed
     );
 
     float wave_secondary_color_ceiling = 0.2;
-    float wave_secondary_speed = 0.15 * time;
+    float wave_secondary_speed = 0.05 * time;
     float wave_secondary_position_y_val_sin = sin(
       uv.x + wave_secondary_speed
     );
@@ -38,43 +38,43 @@ const fragmentShader = glsl`
     vec3 color = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.05,
       (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.2,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.15
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.25
     );
     
     vec3 color2 = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.075,
       (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.175,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.25
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.3
     );
     
     vec3 color3 = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.1,
       (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.15,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.35
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.34
     );
     
     vec3 color4 = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.15,
       (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.1,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.45
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.4
     );
     
     // Sine lines
     // Background
     float amp = 0.15;
     float freq = 3.0;
-    float y = amp * sin(uv.x * freq + time * 0.15);
+    float y = amp * sin(uv.x * freq + time * 0.0025);
 
     // Middle
     float amp2 = 0.08;
     float freq2 = 3.0;
-    float y2 = amp2 * sin(uv.x * freq2 + time * 0.55);
+    float y2 = amp2 * sin(uv.x * freq2 + time * 0.005);
 
 
     // Front
     float amp3 = 0.05;
     float freq3 = 4.0;
-    float y3 = amp3 * sin(uv.x * freq3 + time * 0.75);
+    float y3 = amp3 * sin(uv.x * freq3 + time * 0.1);
     
 
     if (uv.y < y2 + 0.85) {
@@ -126,9 +126,9 @@ export default function HeroBackground() {
     }
 
     let onWindowResize = function () {
-      camera.aspect = document.body.clientWidth / document.body.clientHeight;
+      camera.aspect = document.body.clientWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(document.body.clientWidth, document.body.clientHeight);
+      renderer.setSize(document.body.clientWidth, window.innerHeight);
     }
 
     window.addEventListener("resize", onWindowResize, false);
