@@ -1,3 +1,7 @@
-const withImages = require("next-images");
+const withPlugins = require('next-compose-plugins');
 
-module.exports = withImages();
+const withImages = require("next-images");
+const withMDX = require('@next/mdx')()
+
+module.exports =
+  withPlugins([withImages, withMDX()]);

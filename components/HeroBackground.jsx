@@ -23,8 +23,6 @@ const fragmentShader = glsl`
     // vec2 uv = gl_FragCoord.xy / windowSize;
     vec2 uv = v_uv;
 
-    uv = uv * 1.5 - 1.0;
-
     float wave_primary_color_ceiling = 0.15;
     float wave_primary_speed = 0.5 * time;
     float wave_primary_position_y_val_sin = sin(
@@ -62,46 +60,48 @@ const fragmentShader = glsl`
     );
     
     // Sine lines
-    float amp = 0.025;
-    float freq = 4.0;
-    float y = amp * sin(uv.x * freq + time * 0.25);
+    // Background
+    float amp = 0.15;
+    float freq = 3.0;
+    float y = amp * sin(uv.x * freq + time * 0.15);
+
+    // Middle
+    float amp2 = 0.08;
+    float freq2 = 3.0;
+    float y2 = amp2 * sin(uv.x * freq2 + time * 0.55);
 
 
-    float amp2 = 0.05;
-    float freq2 = 2.0;
-    float y2 = amp2 * sin(uv.x * freq2 + time * 0.35);
-
-
-    float amp3 = 0.075;
-    float freq3 = 3.0;
-    float y3 = amp3 * sin(uv.x * freq3 + time * 0.5);
+    // Front
+    float amp3 = 0.05;
+    float freq3 = 4.0;
+    float y3 = amp3 * sin(uv.x * freq3 + time * 0.75);
     
 
-    if (uv.y > y + 0.15) {
+    if (uv.y < y2 + 0.85) {
       color = color2;
     }
     
-    if (uv.y > y2 + 0.3) {
+    if (uv.y < y + 0.75) {
       color = color3;
     }
     
-    if (uv.y > y3 + 0.5) {
+    if (uv.y < y3 + 0.8) {
       color = color4;
     }
-    
+
     gl_FragColor = vec4(color, 1.0);
   }
 `;
 
-export default function HeroBackground({ backgroundHeight, backgroundWidth }) {
+export default function HeroBackground() {
   const threeRef = React.useRef();
 
   React.useEffect(() => {
     var scene = new Three.Scene();
-    var camera = new Three.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 10);
+    var camera = new Three.PerspectiveCamera(90, document.body.clientWidth / window.innerHeight, 1, 10);
     var renderer = new Three.WebGLRenderer();
 
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(document.body.clientWidth, window.innerHeight);
     threeRef.current.appendChild(renderer.domElement);
 
     const uniforms = {
@@ -126,9 +126,9 @@ export default function HeroBackground({ backgroundHeight, backgroundWidth }) {
     }
 
     let onWindowResize = function () {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.aspect = document.body.clientWidth / document.body.clientHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(document.body.clientWidth, document.body.clientHeight);
     }
 
     window.addEventListener("resize", onWindowResize, false);

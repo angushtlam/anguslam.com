@@ -2,28 +2,9 @@ import * as React from "react";
 import HeroBackground from "./HeroBackground";
 
 export default function Hero() {
-  const [heroHeight, setHeroHeight] = React.useState(0);
-  const [heroWidth, setHeroWidth] = React.useState(0);
-  const divRef = React.useRef();
-
-  React.useEffect(() => {
-    const handleResize = () => {
-      if (divRef.current) {
-        setHeroHeight(divRef.current.clientHeight);
-        setHeroWidth(divRef.current.clientWidth);
-      }
-    };
-
-    window.addEventListener("load", handleResize, false);
-    window.addEventListener("resize", handleResize, false);
-  }, []);
-
   return (
-    <div className="flex flex-col min-h-screen relative" ref={divRef}>
-      <HeroBackground
-        backgroundHeight={heroHeight}
-        backgroundWidth={heroWidth}
-      />
+    <div className="flex flex-col min-h-screen relative">
+      <HeroBackground />
       <div className="h-full flex flex-1 flex-col z-20">
         <div className="align-center border-white border-t-8 flex mb-8 w-full">
           <h1 className="font-black lowercase text-orientation-mixed text-white text-4xl px-8 pt-8">
@@ -34,7 +15,7 @@ export default function Hero() {
           <div className="flex items-center p-4 w-full">
             <div className="mx-auto max-w-screen-md">
               <div className="md:flex">
-                <div className="border border-white flex-2">
+                <div className="border border-white flex-2 rounded-tr-lg md:rounded-tr-none">
                   <h2 className="font-black p-2 text-white title-bg">About</h2>
                   <div className="border-b border-white"></div>
                   <div className="p-2">
@@ -111,7 +92,7 @@ export default function Hero() {
                   </div> */}
                 </div>
               </div>
-              <div className="border-b border-l border-r border-white flex">
+              <div className="border-b border-l border-r border-white flex rounded-bl-lg">
                 <div className="flex-1">
                   <h2 className="font-black p-2 text-white title-bg">
                     Articles
