@@ -1,0 +1,11 @@
+.text-vertical-lr {
+  writing-mode: vertical-lr;
+}
+
+.text-orientation-mixed {
+  text-orientation: mixed;
+}
+
+.title-bg {
+  background: url("../images/title_background.png");
+}
