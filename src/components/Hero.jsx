@@ -7,9 +7,11 @@ export default function Hero() {
       <HeroBackground />
       <div className="h-full flex flex-1 flex-col z-20">
         <div className="align-center border-white border-t-8 flex mb-8 w-full">
-          <h1 className="font-black lowercase text-orientation-mixed text-white text-4xl px-8 pt-8">
-            <a href="/">Angus Lam</a>
-          </h1>
+          <a href="/">
+            <h1 className="font-black lowercase text-orientation-mixed text-white text-4xl px-8 pt-8">
+              Angus Lam
+            </h1>
+          </a>
         </div>
         <div className="flex flex-1">
           <div className="flex items-center p-4 w-full">
@@ -23,9 +25,7 @@ export default function Hero() {
                       Full stack software engineer with an affinity for building
                       products. Currently at Stripe.
                     </p>
-                    <p className="text-white">
-                      Find me at:
-                    </p>
+                    <p className="text-white">Find me at:</p>
                     <div className="text-white">
                       <ul className="list-disc ml-6">
                         <li>

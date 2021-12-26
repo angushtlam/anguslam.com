@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://www.anguslam.com",
     title: "Angus Lam",
   },
   plugins: [
@@ -15,6 +15,20 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: "./src/pages/",
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "articles",
+        path: "./src/articles/",
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
@@ -26,14 +40,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
     },
     {
       resolve: `gatsby-plugin-postcss`,

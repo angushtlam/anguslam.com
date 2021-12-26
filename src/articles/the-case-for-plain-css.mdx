@@ -1,7 +1,11 @@
 ---
+category: developer-resources
 title: The case for plain CSS
+blurb: I argue for just using plain CSS for less mature codebases and deferring the implementation of some CSS tools
+slug: the-case-for-plain-css
 published: true
-lastUpdated: 2021-10-18
+created: 2021-10-18
+updated: 2021-10-18
 ---
 
 Between working on an established codebase or starting out a new side project, it feels like there are so many choices for adding styling to websites nowadays. Plain ol' classic CSS, inline CSS making a comeback, Bootstrap, Tailwind, what about those fancy scoped CSS modules, Sass, PostCSS, CSS-in-JavaScript, do I bundle them or export them into a single CSS file? Multiple CSS files? Analysis paralysis.
@@ -34,7 +38,7 @@ These are some principles that are useful to justify using one or more of those 
 - Reversibility - Will it be difficult to remove or refactor if the tool ends up insufficient or unsuited for the use cases?
 The tradeoffs aren't between CSS tool to CSS tool, it's comparing it to the browser-spec'd CSS. Something in common for the principles except productivity is that the justification of the tool is usually very minimal on smaller projects.
 
-# Just write plain CSS
+## Just write plain CSS
 Especially when starting out, there's nothing wrong with writing a plain old CSS stylesheet.
 
 - It (depends on what's getting built, but usually) is productive to just start building rather than figuring out which concoction of tools to use and configuring them to work.

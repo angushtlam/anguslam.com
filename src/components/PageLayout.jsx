@@ -4,9 +4,9 @@ import ReactHelmet from "react-helmet";
 import "../styles/global.css";
 import "../styles/index.css";
 
-export default function Layout({ children }) {
+export default function PageLayout({ children, ...props }) {
   return (
-    <div>
+    <div {...props}>
       <ReactHelmet>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
