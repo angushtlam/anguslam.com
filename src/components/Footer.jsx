@@ -10,19 +10,34 @@ export default function Header() {
               Angus Lam
             </h1>
           </a>
-          <ul className="my-4">
+          <ul className="list-disc ml-6 my-4">
             <li>
-              <a className="font-black text-blue-500 underline" href="#">
+              <a
+                className="font-black text-blue-500 underline"
+                href="https://twitter.com/angushtlam"
+                rel="noreferrer"
+                target="_blank"
+              >
                 Twitter
               </a>
             </li>
             <li>
-              <a className="font-black text-blue-500 underline" href="#">
+              <a
+                className="font-black text-blue-500 underline"
+                href="https://github.com/angushtlam"
+                rel="noreferrer"
+                target="_blank"
+              >
                 GitHub
               </a>
             </li>
             <li>
-              <a className="font-black text-blue-500 underline" href="#">
+              <a
+                className="font-black text-blue-500 underline"
+                href="https://linkedin.com/in/angushtlam"
+                rel="noreferrer"
+                target="_blank"
+              >
                 LinkedIn
               </a>
             </li>
