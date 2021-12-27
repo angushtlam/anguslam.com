@@ -151,6 +151,12 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <div
+        className="absolute bottom-0 h-40 w-full"
+        style={{
+          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%)`,
+        }}
+      ></div>
     </div>
   );
 }
