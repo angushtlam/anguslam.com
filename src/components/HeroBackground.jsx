@@ -158,7 +158,7 @@ export default function HeroBackground({ heroRef }) {
         threeRef.current.removeChild(threeRenderer.domElement);
       }
     };
-  });
+  }, [heroRef]);
 
   return <div className="absolute" ref={threeRef}></div>;
 }

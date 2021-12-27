@@ -9,25 +9,27 @@ export default function Header() {
             <h1 className="font-black lowercase text-orientation-mixed text-2xl">
               Angus Lam
             </h1>
-            <ul className="my-4">
-              <li>
-                <a className="font-black text-blue-500 underline" href="#">
-                  Twitter
-                </a>
-              </li>
-              <li>
-                <a className="font-black text-blue-500 underline" href="#">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a className="font-black text-blue-500 underline" href="#">
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
-            <p className="pb-8">© Angus Lam 2017-{Math.max(2018, new Date().getFullYear())}</p>
           </a>
+          <ul className="my-4">
+            <li>
+              <a className="font-black text-blue-500 underline" href="#">
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a className="font-black text-blue-500 underline" href="#">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a className="font-black text-blue-500 underline" href="#">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+          <p className="pb-8">
+            © Angus Lam 2017-{Math.max(2018, new Date().getFullYear())}
+          </p>
         </div>
         <div className="flex-1">
           <p className="text-sm">

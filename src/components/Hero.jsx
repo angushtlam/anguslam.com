@@ -26,11 +26,40 @@ export default function Hero() {
               <div className="md:flex mb-8">
                 <div className="border border-t-8 border-white flex-1 shrink-0">
                   <h2 className="font-black p-2 text-white title-bg">About</h2>
-                  <div className="border-b border-white"></div>
                   <div className="p-2">
                     <p className="text-white mb-4">
                       Full stack software engineer with an affinity for building
-                      products. Currently at Stripe.
+                      products. I also like owls :)
+                    </p>
+                    <p className="text-white mb-4">
+                      Currently at{" "}
+                      <a
+                        className="font-black text-blue-500 underline"
+                        href="https://stripe.com/"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        Stripe
+                      </a>
+                      . Formerly{" "}
+                      <a
+                        className="font-black text-blue-500 underline"
+                        href="https://lugg.com/"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        Lugg
+                      </a>
+                      ,{" "}
+                      <a
+                        className="font-black text-blue-500 underline"
+                        href="https://optimizely.com/"
+                        rel="noreferrer"
+                        target="_blank"
+                      >
+                        Optimizely
+                      </a>
+                      .
                     </p>
                     <p className="text-white">Find me at:</p>
                     <div className="text-white">
@@ -78,9 +107,8 @@ export default function Hero() {
               <div className="border-b border-l border-r border-t-8 border-white flex">
                 <div className="flex-1">
                   <h2 className="font-black p-2 text-white title-bg">
-                    Articles
+                    Some of my writing
                   </h2>
-                  <div className="border-b border-white"></div>
                   <div className="p-2 text-white">
                     <ul className="list-disc ml-6">
                       <li>
@@ -112,7 +140,7 @@ export default function Hero() {
                           className="font-black text-blue-500 underline"
                           href="#"
                         >
-                          More…
+                          See all…
                         </a>
                       </li>
                     </ul>
