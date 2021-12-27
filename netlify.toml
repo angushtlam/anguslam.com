@@ -5,8 +5,20 @@
   force = true
 
 [[redirects]]
+  from = "/articles"
+  to = "/"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "/article/triplebyte"
-  to = "/article/a-college-students-experience-with-triplebyte"
+  to = "/article/triplebyte-college-student"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/article/a-college-students-experience-with-triplebyte"
+  to = "/article/triplebyte-college-student"
   status = 301
   force = true
 
