@@ -93,64 +93,72 @@ const fragmentShader = glsl`
   }
 `;
 
-export default function HeroBackground() {
+export default function HeroBackground({ heroRef }) {
+  const [threeInitialized, setThreeInitialized] = React.useState(false);
+  const [threeRenderer, setThreeRenderer] = React.useState(null);
   const threeRef = React.useRef();
 
   React.useEffect(() => {
-    var scene = new Three.Scene();
-    var camera = new Three.PerspectiveCamera(
-      90,
-      document.body.clientWidth / window.innerHeight,
-      1,
-      10
-    );
-    
-    var renderer = new Three.WebGLRenderer();
+    const initialHeight = heroRef.current.offsetHeight;
+    const initialWidth = heroRef.current.offsetWidth;
 
-    renderer.setSize(document.body.clientWidth, window.innerHeight);
-    threeRef.current.appendChild(renderer.domElement);
+    if (!threeInitialized) {
+      let scene = new Three.Scene();
+      let camera = new Three.PerspectiveCamera(
+        90,
+        initialWidth / initialHeight,
+        1,
+        10
+      );
+      let renderer = new Three.WebGLRenderer();
 
-    const uniforms = {
-      time: { value: 0.0 },
-    };
+      renderer.setSize(initialWidth, initialHeight);
+      threeRef.current.appendChild(renderer.domElement);
 
-    var geometry = new Three.PlaneGeometry(2, 2, 1, 1);
-    var material = new Three.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
-      uniforms,
-    });
+      const uniforms = {
+        time: { value: 0.0 },
+      };
 
-    var mesh = new Three.Mesh(geometry, material);
-    scene.add(mesh);
+      var geometry = new Three.PlaneGeometry(2, 2, 1, 1);
+      var material = new Three.ShaderMaterial({
+        vertexShader,
+        fragmentShader,
+        uniforms,
+      });
 
-    var animate = function () {
-      requestAnimationFrame(animate);
-      uniforms.time.value = clock.getElapsedTime();
-      renderer.render(scene, camera);
-    };
+      var mesh = new Three.Mesh(geometry, material);
+      scene.add(mesh);
 
-    let onWindowResize = function () {
-      camera.aspect = document.body.clientWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(document.body.clientWidth, window.innerHeight);
-    };
+      var animate = function () {
+        requestAnimationFrame(animate);
+        uniforms.time.value = clock.getElapsedTime();
+        renderer.render(scene, camera);
+      };
 
-    window.addEventListener("resize", onWindowResize, false);
+      let onWindowResize = function () {
+        if (heroRef && heroRef.current) {
+          const height = heroRef.current.offsetHeight;
+          const width = heroRef.current.offsetWidth;
+          camera.aspect = width / height;
+          camera.updateProjectionMatrix();
+          renderer.setSize(width, height);
+        }
+      };
 
-    animate();
+      window.addEventListener("resize", onWindowResize, false);
+
+      animate();
+      setThreeInitialized(true);
+      setThreeRenderer(renderer);
+    }
 
     return function cleanup() {
       // Sometimes the ref could've already been destroyed.
-      if (!!threeRef?.current) {
-        threeRef.current.removeChild(renderer.domElement);
+      if (threeInitialized && threeRef && threeRef.current) {
+        threeRef.current.removeChild(threeRenderer.domElement);
       }
     };
-  }, []);
+  });
 
-  return (
-    <div className="absolute">
-      <div ref={threeRef} />
-    </div>
-  );
+  return <div className="absolute" ref={threeRef}></div>;
 }

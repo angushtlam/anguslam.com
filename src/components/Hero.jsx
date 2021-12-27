@@ -4,9 +4,14 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function Hero() {
+  const heroRef = React.useRef();
+
   return (
-    <div className="bg-slate-900 flex flex-col min-h-screen relative">
-      <HeroBackground />
+    <div
+      className="bg-slate-900 flex flex-col min-h-screen relative"
+      ref={heroRef}
+    >
+      <HeroBackground heroRef={heroRef} />
       <div className="h-full flex flex-1 flex-col z-20">
         <div className="align-center border-white border-t-8 flex mb-8 w-full">
           <Link to="/">
