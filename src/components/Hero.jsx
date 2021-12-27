@@ -41,7 +41,7 @@ export default function Hero() {
                       >
                         Stripe
                       </a>
-                      . Formerly{" "}
+                      . Previously{" "}
                       <a
                         className="font-black text-blue-500 underline"
                         href="https://lugg.com/"
@@ -116,7 +116,7 @@ export default function Hero() {
                           className="font-black text-blue-500 underline"
                           to="/article/building-a-student-tech-community"
                         >
-                          Running a student tech community
+                          Building a student tech community
                         </Link>
                       </li>
                       <li>
@@ -152,9 +152,9 @@ export default function Hero() {
         </div>
       </div>
       <div
-        className="absolute bottom-0 h-40 w-full"
+        className="absolute bottom-0 h-14 w-full"
         style={{
-          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%)`,
+          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%)`,
         }}
       ></div>
     </div>
