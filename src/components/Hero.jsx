@@ -114,7 +114,7 @@ export default function Hero() {
                       <li>
                         <Link
                           className="font-black text-blue-500 underline"
-                          to="/articles/building-a-student-tech-community"
+                          to="/article/building-a-student-tech-community"
                         >
                           Running a student tech community
                         </Link>
@@ -122,7 +122,7 @@ export default function Hero() {
                       <li>
                         <Link
                           className="font-black text-blue-500 underline"
-                          href="/articles/react-native-gotchas"
+                          href="/article/react-native-gotchas"
                         >
                           Gotchas for web developers trying out React Native
                         </Link>
@@ -130,7 +130,7 @@ export default function Hero() {
                       <li>
                         <Link
                           className="font-black text-blue-500 underline"
-                          to="/articles/the-case-for-plain-css"
+                          to="/article/the-case-for-plain-css"
                         >
                           The case for plain CSS
                         </Link>

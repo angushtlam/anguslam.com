@@ -18,7 +18,7 @@ function CategoryArticleList({ children }) {
 
 function CategoryArticle({ frontmatter: { blurb, title }, slug }) {
   return (
-    <Link className="block" to={`/articles/${slug}`}>
+    <Link className="block" to={`/article/${slug}`}>
       <h3 className="font-black text-blue-500 text-lg underline">{title}</h3>
       <p>{blurb}</p>
     </Link>

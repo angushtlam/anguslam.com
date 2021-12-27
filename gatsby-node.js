@@ -19,7 +19,7 @@ exports.createPages = async function ({ actions, graphql }) {
 
     if (!!published) {
       actions.createPage({
-        path: `articles/${slug}`,
+        path: `article/${slug}`,
         component: require.resolve("./src/templates/ArticleLayout.jsx"),
         context: { slug: slug },
       });

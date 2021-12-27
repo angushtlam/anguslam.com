@@ -25,7 +25,7 @@ export default function ArticleLayout({ data }) {
           <p>
             <em>Are the articles up-to-date or still relevant? </em>
             <Link className="font-black text-blue-500 underline"
-            to="/articles/evergreen-writing">Explainer here →</Link>
+            to="/article/evergreen-writing">Explainer here →</Link>
           </p>
         </div>
       </div>
