@@ -53,7 +53,7 @@ function IndexPageImpl({ allMdx: { edges } }) {
   return (
     <PageLayout>
       <Hero />
-      <div className="px-4 py-16 bg-slate-100">
+      <div className="px-4 py-16 bg-slate-100" id="articles">
         <div className="mx-auto max-w-screen-lg">
           {Object.keys(categorizedArticles).map((category) => {
             const articles = categorizedArticles[category];

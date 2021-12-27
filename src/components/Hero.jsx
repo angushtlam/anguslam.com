@@ -112,33 +112,33 @@ export default function Hero() {
                   <div className="p-2 text-white">
                     <ul className="list-disc ml-6">
                       <li>
-                        <a
+                        <Link
                           className="font-black text-blue-500 underline"
-                          href="#"
+                          to="/articles/building-a-student-tech-community"
                         >
                           Running a student tech community
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="font-black text-blue-500 underline"
-                          href="#"
+                          href="/articles/react-native-gotchas"
                         >
                           Gotchas for web developers trying out React Native
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
                           className="font-black text-blue-500 underline"
-                          href="#"
+                          to="/articles/the-case-for-plain-css"
                         >
                           The case for plain CSS
-                        </a>
+                        </Link>
                       </li>
                       <li>
                         <a
                           className="font-black text-blue-500 underline"
-                          href="#"
+                          href="#articles"
                         >
                           See all…
                         </a>

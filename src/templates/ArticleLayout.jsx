@@ -1,7 +1,8 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import * as React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import PageLayout from "../components/PageLayout";
 import "../styles/markdown.css";
 
@@ -19,10 +20,16 @@ export default function ArticleLayout({ data }) {
           <MDXRenderer>{body}</MDXRenderer>
         </div>
 
-        <h2>
-          Posted on <span>{updated}</span>
-        </h2>
+        <div className="inline-block bg-slate-200 mt-12 p-4">
+          <p>Last updated {updated}</p>
+          <p>
+            <em>Are the articles up-to-date or still relevant? </em>
+            <Link className="font-black text-blue-500 underline"
+            to="/articles/evergreen-writing">Explainer here →</Link>
+          </p>
+        </div>
       </div>
+      <Footer />
     </PageLayout>
   );
 }
