@@ -8,6 +8,7 @@ export default function PageLayout({ children, ...props }) {
   return (
     <div {...props}>
       <ReactHelmet>
+        <title>Angus Lam - anguslam.com</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
