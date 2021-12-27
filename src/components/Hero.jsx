@@ -1,23 +1,25 @@
 import * as React from "react";
 import HeroBackground from "./HeroBackground";
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col min-h-screen relative">
+    <div className="bg-slate-900 flex flex-col min-h-screen relative">
       <HeroBackground />
       <div className="h-full flex flex-1 flex-col z-20">
         <div className="align-center border-white border-t-8 flex mb-8 w-full">
-          <a href="/">
+          <Link to="/">
             <h1 className="font-black lowercase text-orientation-mixed text-white text-4xl px-8 pt-8">
               Angus Lam
             </h1>
-          </a>
+          </Link>
         </div>
         <div className="flex flex-1">
           <div className="flex items-center p-4 w-full">
-            <div className="mx-auto max-w-screen-md">
-              <div className="md:flex">
-                <div className="border border-white flex-2 rounded-tr-lg md:rounded-tr-none">
+            <div className="mx-auto max-w-screen-md mb-8">
+              <div className="md:flex mb-8">
+                <div className="border border-t-8 border-white flex-1 shrink-0">
                   <h2 className="font-black p-2 text-white title-bg">About</h2>
                   <div className="border-b border-white"></div>
                   <div className="p-2">
@@ -30,7 +32,7 @@ export default function Hero() {
                       <ul className="list-disc ml-6">
                         <li>
                           <a
-                            className="text-blue-300 underline"
+                            className="font-black text-blue-500 underline"
                             href="https://twitter.com/angushtlam"
                             rel="noreferrer"
                             target="_blank"
@@ -40,7 +42,7 @@ export default function Hero() {
                         </li>
                         <li>
                           <a
-                            className="text-blue-300 underline"
+                            className="font-black text-blue-500 underline"
                             href="https://github.com/angushtlam"
                             rel="noreferrer"
                             target="_blank"
@@ -50,7 +52,7 @@ export default function Hero() {
                         </li>
                         <li>
                           <a
-                            className="text-blue-300 underline"
+                            className="font-black text-blue-500 underline"
                             href="https://linkedin.com/in/angushtlam"
                             rel="noreferrer"
                             target="_blank"
@@ -62,37 +64,13 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-                <div className="md:border-b border-r md:border-t border-l md:border-l-0 border-white rounded-tr-full flex-1">
-                  {/* <h2 className="font-black p-2 text-white title-bg">
-                    Portfolio
-                  </h2>
-                  <div className="border-b border-white"></div>
-                  <div className="p-2 space-y-2">
-                    <a className="flex space-x-2 text-white" href="#">
-                      <div className="bg-white h-20 flex-1 max-w-1/2"></div>
-                      <p className="flex-1 text-blue-300 underline">
-                        Netscrape
-                      </p>
-                    </a>
-                    <a className="flex space-x-2 text-white" href="#">
-                      <div className="bg-white h-20 flex-1 max-w-1/2"></div>
-                      <p className="flex-1 text-blue-300 underline">Ghosts</p>
-                    </a>
-                    <a className="flex space-x-2 text-white" href="#">
-                      <div className="bg-white h-20 flex-1 max-w-1/2"></div>
-                      <p className="flex-1 text-blue-300 underline">
-                        Self-regulating hydroponics
-                      </p>
-                    </a>
+                <div className="flex-1 hidden md:block shrink">
+                  <div className="p-8">
+                    <StaticImage alt="" src="../images/owl.svg" />
                   </div>
-                  <div className="pb-2 px-2">
-                    <a className="text-blue-300 underline" href="#">
-                      More…
-                    </a>
-                  </div> */}
                 </div>
               </div>
-              <div className="border-b border-l border-r border-white flex rounded-bl-lg">
+              <div className="border-b border-l border-r border-t-8 border-white flex">
                 <div className="flex-1">
                   <h2 className="font-black p-2 text-white title-bg">
                     Articles
@@ -101,22 +79,34 @@ export default function Hero() {
                   <div className="p-2 text-white">
                     <ul className="list-disc ml-6">
                       <li>
-                        <a className="text-blue-300 underline" href="#">
+                        <a
+                          className="font-black text-blue-500 underline"
+                          href="#"
+                        >
                           Running a student tech community
                         </a>
                       </li>
                       <li>
-                        <a className="text-blue-300 underline" href="#">
+                        <a
+                          className="font-black text-blue-500 underline"
+                          href="#"
+                        >
                           Gotchas for web developers trying out React Native
                         </a>
                       </li>
                       <li>
-                        <a className="text-blue-300 underline" href="#">
+                        <a
+                          className="font-black text-blue-500 underline"
+                          href="#"
+                        >
                           The case for plain CSS
                         </a>
                       </li>
                       <li>
-                        <a className="text-blue-300 underline" href="#">
+                        <a
+                          className="font-black text-blue-500 underline"
+                          href="#"
+                        >
                           More…
                         </a>
                       </li>

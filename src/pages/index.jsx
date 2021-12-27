@@ -1,22 +1,27 @@
 import * as React from "react";
 import Hero from "../components/Hero";
 import PageLayout from "../components/PageLayout";
-import { graphql, StaticQuery } from "gatsby";
+import Footer from "../components/Footer";
+import { Link, graphql, StaticQuery } from "gatsby";
 
 function CategoryTitle({ children }) {
   return <h2 className="font-black text-gray-500 text-md">{children}</h2>;
 }
 
 function CategoryArticleList({ children }) {
-  return <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12 mt-4">{children}</div>;
+  return (
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12 mt-4">
+      {children}
+    </div>
+  );
 }
 
 function CategoryArticle({ frontmatter: { blurb, title }, slug }) {
   return (
-    <a className="block" href={`articles/${slug}`}>
-      <h3 className="font-black text-blue-700 text-lg underline">{title}</h3>
+    <Link className="block" to={`/articles/${slug}`}>
+      <h3 className="font-black text-blue-500 text-lg underline">{title}</h3>
       <p>{blurb}</p>
-    </a>
+    </Link>
   );
 }
 
@@ -53,20 +58,21 @@ function IndexPageImpl({ allMdx: { edges } }) {
           {Object.keys(categorizedArticles).map((category) => {
             const articles = categorizedArticles[category];
             return (
-              <>
+              <div key={category}>
                 <CategoryTitle>
                   {categoryOrderingAndTitle[category]}
                 </CategoryTitle>
                 <CategoryArticleList>
                   {articles.map((article) => (
-                    <CategoryArticle {...article} />
+                    <CategoryArticle key={article.slug} {...article} />
                   ))}
                 </CategoryArticleList>
-              </>
+              </div>
             );
           })}
         </div>
       </div>
+      <Footer />
     </PageLayout>
   );
 }

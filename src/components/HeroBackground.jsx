@@ -37,26 +37,26 @@ const fragmentShader = glsl`
 
     vec3 color = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.05,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.2,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.25
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.1,
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.15
     );
     
     vec3 color2 = vec3(
       abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.075,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.175,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.3
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.075,
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.23
     );
     
     vec3 color3 = vec3(
-      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.1,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.15,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.34
+      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.05,
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.08,
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.2
     );
     
     vec3 color4 = vec3(
-      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.15,
-      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.1,
-      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.4
+      abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling + 0.08,
+      (abs(uv.y - wave_primary_position_y_val_sin) * wave_primary_color_ceiling) * 0.2,
+      abs(uv.y - wave_secondary_position_y_val_sin) * wave_secondary_color_ceiling + 0.28
     );
     
     // Sine lines
@@ -76,12 +76,12 @@ const fragmentShader = glsl`
     float freq3 = 4.0;
     float y3 = amp3 * sin(uv.x * freq3 + time * 0.1);
     
-
-    if (uv.y < y2 + 0.85) {
+    
+    if (uv.y < y + 0.85) {
       color = color2;
     }
     
-    if (uv.y < y + 0.75) {
+    if (uv.y < y2 + 0.75) {
       color = color3;
     }
     
@@ -98,47 +98,59 @@ export default function HeroBackground() {
 
   React.useEffect(() => {
     var scene = new Three.Scene();
-    var camera = new Three.PerspectiveCamera(90, document.body.clientWidth / window.innerHeight, 1, 10);
+    var camera = new Three.PerspectiveCamera(
+      90,
+      document.body.clientWidth / window.innerHeight,
+      1,
+      10
+    );
+    
     var renderer = new Three.WebGLRenderer();
 
     renderer.setSize(document.body.clientWidth, window.innerHeight);
     threeRef.current.appendChild(renderer.domElement);
 
     const uniforms = {
-      time: { value: 0.0 }
-    }
+      time: { value: 0.0 },
+    };
 
     var geometry = new Three.PlaneGeometry(2, 2, 1, 1);
     var material = new Three.ShaderMaterial({
       vertexShader,
       fragmentShader,
       uniforms,
-
     });
-    var cube = new Three.Mesh(geometry, material);
 
-    scene.add(cube);
+    var mesh = new Three.Mesh(geometry, material);
+    scene.add(mesh);
 
     var animate = function () {
       requestAnimationFrame(animate);
       uniforms.time.value = clock.getElapsedTime();
       renderer.render(scene, camera);
-    }
+    };
 
     let onWindowResize = function () {
       camera.aspect = document.body.clientWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(document.body.clientWidth, window.innerHeight);
-    }
+    };
 
     window.addEventListener("resize", onWindowResize, false);
 
     animate();
 
-    return () => threeRef.current.removeChild(renderer.domElement);
+    return function cleanup() {
+      // Sometimes the ref could've already been destroyed.
+      if (!!threeRef?.current) {
+        threeRef.current.removeChild(renderer.domElement);
+      }
+    };
   }, []);
 
   return (
-    <div style={{ position: 'absolute' }} ref={threeRef} />
+    <div className="absolute">
+      <div ref={threeRef} />
+    </div>
   );
 }
