@@ -101,6 +101,8 @@ export default function HeroBackground({ heroRef }) {
   React.useEffect(() => {
     const initialHeight = heroRef.current.offsetHeight;
     const initialWidth = heroRef.current.offsetWidth;
+    const threeRefCurrentElement = threeRef && threeRef.current;
+    const threeRendererDomElement = threeRenderer && threeRenderer.domElement;
 
     if (!threeInitialized) {
       let scene = new Three.Scene();
@@ -154,11 +156,11 @@ export default function HeroBackground({ heroRef }) {
 
     return function cleanup() {
       // Sometimes the ref could've already been destroyed.
-      if (threeInitialized && threeRef && threeRef.current) {
-        threeRef.current.removeChild(threeRenderer.domElement);
+      if (threeInitialized && threeRefCurrentElement) {
+        threeRefCurrentElement.removeChild(threeRendererDomElement);
       }
     };
-  }, [heroRef]);
+  }, [heroRef, threeInitialized, threeRenderer]);
 
   return <div className="absolute" ref={threeRef}></div>;
 }
