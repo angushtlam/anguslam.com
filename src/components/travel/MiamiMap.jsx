@@ -14,6 +14,10 @@ const markerIcon =
     : null;
 
 export default function MiamiMap() {
+  if (typeof window === "undefined") {
+    return null;
+  }
+
   return (
     <MapContainer
       center={[25.7433, -80.2009]}
