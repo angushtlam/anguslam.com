@@ -30,6 +30,7 @@ function IndexPageImpl({ allMdx: { edges } }) {
     "developer-resources": "Developer resources",
     career: "Career",
     community: "Community",
+    travel: "Travel",
     miscellaneous: "Miscellaneous",
   };
   const categoryOrder = Object.keys(categoryOrderingAndTitle);

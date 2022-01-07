@@ -26,3 +26,19 @@ exports.createPages = async function ({ actions, graphql }) {
     }
   });
 };
+
+// Leaflet expects window to be defined
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html" || stage === "develop-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /leaflet/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    });
+  }
+};
