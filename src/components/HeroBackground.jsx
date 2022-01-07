@@ -24,13 +24,13 @@ const fragmentShader = glsl`
     vec2 uv = v_uv;
 
     float wave_primary_color_ceiling = 0.15;
-    float wave_primary_speed = 0.25 * time;
+    float wave_primary_speed = 0.33 * time;
     float wave_primary_position_y_val_sin = sin(
       uv.x + wave_primary_speed
     );
 
     float wave_secondary_color_ceiling = 0.2;
-    float wave_secondary_speed = 0.05 * time;
+    float wave_secondary_speed = 0.1 * time;
     float wave_secondary_position_y_val_sin = sin(
       uv.x + wave_secondary_speed
     );
@@ -63,12 +63,12 @@ const fragmentShader = glsl`
     // Background
     float amp = 0.15;
     float freq = 3.0;
-    float y = amp * sin(uv.x * freq + time * 0.0025);
+    float y = amp * sin(uv.x * freq + time * 0.025);
 
     // Middle
     float amp2 = 0.08;
     float freq2 = 3.0;
-    float y2 = amp2 * sin(uv.x * freq2 + time * 0.005);
+    float y2 = amp2 * sin(uv.x * freq2 + time * 0.05);
 
 
     // Front

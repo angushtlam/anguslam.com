@@ -8,7 +8,7 @@ export default function Hero() {
 
   return (
     <div
-      className="bg-slate-900 flex flex-col min-h-screen relative"
+      className="bg-slate-900 flex flex-col relative"
       ref={heroRef}
     >
       <HeroBackground heroRef={heroRef} />
@@ -21,7 +21,7 @@ export default function Hero() {
           </Link>
         </div>
         <div className="flex flex-1">
-          <div className="flex items-center p-4 w-full">
+          <div className="flex items-center px-4 py-8 w-full">
             <div className="mx-auto max-w-screen-md mb-8">
               <div className="md:flex mb-8">
                 <div className="border border-t-8 border-white flex-1 shrink-0">
@@ -100,7 +100,7 @@ export default function Hero() {
                 </div>
                 <div className="flex-1 hidden md:block shrink">
                   <div className="p-8">
-                    <StaticImage alt="" src="../images/owl.svg" />
+                    <StaticImage alt="" src="../images/owl.svg" placeholder="none" />
                   </div>
                 </div>
               </div>
