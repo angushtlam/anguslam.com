@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.anguslam.com",
-    title: "Angus Lam",
+    title: "Angus Lam - anguslam.com",
+    description: `Angus Lam is a software engineer based in New York City. This is his website where he shares his projects and writing.`,
+    social: {
+      twitter: `angushtlam`,
+    },
   },
   plugins: [
     {

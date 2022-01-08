@@ -11,7 +11,7 @@ export default function ArticleLayout({ data }) {
   const { body } = data.mdx;
 
   return (
-    <PageLayout className="bg-slate-100">
+    <PageLayout className="bg-slate-100" title={title}>
       <Header />
       <div className="max-w-screen-md mx-auto p-4">
         <h1 className="font-black text-2xl md:text-3xl mb-8">{title}</h1>
