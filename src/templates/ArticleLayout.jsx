@@ -7,11 +7,11 @@ import PageLayout from "../components/PageLayout";
 import "../styles/markdown.css";
 
 export default function ArticleLayout({ data }) {
-  const { title, updated } = data.mdx.frontmatter;
+  const { blurb, title, updated } = data.mdx.frontmatter;
   const { body } = data.mdx;
 
   return (
-    <PageLayout className="bg-slate-100" title={title}>
+    <PageLayout className="bg-slate-100" title={title} description={blurb}>
       <Header />
       <div className="max-w-screen-md mx-auto p-4">
         <h1 className="font-black text-2xl md:text-3xl mb-8">{title}</h1>
@@ -24,8 +24,12 @@ export default function ArticleLayout({ data }) {
           <p>Last updated {updated}</p>
           <p>
             <em>Are the articles up-to-date or still relevant? </em>
-            <Link className="font-black text-blue-500 underline"
-            to="/article/evergreen-writing">Explainer here →</Link>
+            <Link
+              className="font-black text-blue-500 underline"
+              to="/article/evergreen-writing"
+            >
+              Explainer here →
+            </Link>
           </p>
         </div>
       </div>
@@ -38,6 +42,7 @@ export const query = graphql`
   query getPost($slug: String!) {
     mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
+        blurb
         title
         slug
         updated(formatString: "MMMM Do, YYYY")
