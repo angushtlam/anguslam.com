@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Head from 'next/head'
 
 const Home: NextPage = () => {
@@ -17,9 +18,9 @@ const Home: NextPage = () => {
         </p>
         <ul className="list-disc">
           <li className="ml-8">
-            <a className="text-blue-500 underline" href="/">
-              my programming hobby turned day job - angus.dev
-            </a>
+            <Link href="/" passHref>
+              <a className="text-blue-500 underline" >my programming hobby turned day job - angus.dev</a>
+            </Link>
           </li>
         </ul>
       </main>
