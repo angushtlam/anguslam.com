@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </p>
         <ul className="list-disc">
           <li className="ml-8">
-            <Link href="/" passHref>
+            <Link href="https://angus.dev/" passHref>
               <a className="text-blue-500 underline" >my programming hobby turned day job - angus.dev</a>
             </Link>
           </li>
