@@ -10,15 +10,20 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <h1 className="text-4xl font-bold">
-          Angus Lam
+          angus lam
         </h1>
-        <ul>
-          <li>
-            <a href=""></a>
+        <p className="mb-4">
+          hi, welcome to my space on the internet
+        </p>
+        <ul className="list-disc">
+          <li className="ml-8">
+            <a className="text-blue-500 underline" href="/">
+              my programming hobby turned day job - angus.dev
+            </a>
           </li>
         </ul>
       </main>
-      <footer>
+      <footer className="mt-4">
         ©️ Angus Lam 2022
       </footer>
     </div>
