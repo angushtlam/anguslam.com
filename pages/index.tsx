@@ -25,7 +25,7 @@ const IndexPage: NextPage = () => {
             <ul className="list-disc">
               <li className="ml-8">
                 <Link href="https://angus.dev/article/building-a-student-tech-community" passHref>
-                  <a className="text-blue-500 underline">"Building a student tech community." A blog post about how I organized UB ACM in 2017-2019.</a>
+                  <a className="text-blue-500 underline">g"Building a student tech community." A blog post about how I organized UB ACM in 2017-2019.</a>
                 </Link>
               </li>
             </ul>

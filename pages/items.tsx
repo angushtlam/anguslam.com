@@ -23,7 +23,6 @@ const ItemsPage: NextPage = ({ data }: any) => {
         <p className="mb-4">
           Trying this idea out.
         </p>
-
         <p className="mb-4">
           An incremental approach on identifying essentials, responsible consumption, and supporting manufacturers of durable goods. As an individual living in the twenty-first century, it's an introspective challenge to reconcile living in the times of the impending climate crisis with spillovers of attitude and luxuries from globalization efforts in the previous century. Sustainability is a large topic, but this working theory focuses on consumer goods.
         </p>
@@ -65,7 +64,7 @@ const ItemsPage: NextPage = ({ data }: any) => {
         <p className="mb-4">
           Simultaneously, I'm trying to rewire my terminally engineer brain to avoid overengineering simple ideas or reinventing the wheel. To see test out this idea, I created this table in Notion to track the date of purchase and price of items I own.
         </p>
-        <Image src="/items_notion.jpg" height={892} width={1717} />
+        <Image alt="Notion table screenshot" src="/items_notion.jpg" height={892} width={1717} />
         <p className="mb-4">
           Below is a truncated version of the table. It's clearly not complete, but I'll continue to expand this list over time.
         </p>
