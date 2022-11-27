@@ -1,0 +1,7 @@
+/public
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
