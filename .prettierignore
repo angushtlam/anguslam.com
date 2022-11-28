@@ -3,5 +3,10 @@
 # Vercel
 .vercel
 
+# Next.JS
+.next/
+.cache/
+.upm/
+
 # TypeScript
 *.tsbuildinfo

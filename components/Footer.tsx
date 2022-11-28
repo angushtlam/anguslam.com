@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -9,6 +9,5 @@ export default function Footer() {
         <a className="text-blue-500 underline">twitter @angushtlam</a>
       </Link>
     </footer>
-  )
+  );
 }
-

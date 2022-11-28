@@ -6,12 +6,12 @@ module.exports = {
   ],
   safelist: [
     {
-      // Dynamic colors for 
-      pattern: /bg-[a-z]*-400/, 
+      // Dynamic colors for
+      pattern: /bg-[a-z]*-400/,
     },
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
