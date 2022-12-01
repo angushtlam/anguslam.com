@@ -11,10 +11,7 @@ async function personalItemLogDatabase() {
 
   let tableLastUpdated = new Date();
   const items = results
-    .filter(
-      (item: any) =>
-        item.properties.Cost.number && item.properties.Cost.number < 500
-    )
+    .filter((item: any) => !item.properties["Hide online"].checkbox)
     .map((item: any) => {
       const costPerDay =
         item.properties.Cost.number /
@@ -38,7 +35,9 @@ async function personalItemLogDatabase() {
         })),
         costPerDay: Math.round(costPerDay * 100) / 100,
         daysUntilTarget,
-        name: item.properties.Name.title[0].plain_text,
+        name: item.properties["Short name"].rich_text.length > 0
+          ? item.properties["Short name"].rich_text[0].plain_text
+          : item.properties.Name.title[0].plain_text,
       };
     });
 
