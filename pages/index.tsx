@@ -35,6 +35,14 @@ const IndexPage: NextPage = () => {
             </ul>
           </li>
           <li className="ml-8">
+            <Link href="https://kindredunspirits.com" passHref>
+              <a className="text-blue-500 underline" target="_blank">
+                kindred unspirits - i sell holographic stickers of household
+                items
+              </a>
+            </Link>
+          </li>
+          <li className="ml-8">
             travel
             <ul className="list-disc">
               <li className="ml-8">
