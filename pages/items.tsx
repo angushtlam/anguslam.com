@@ -8,7 +8,7 @@ import { personalItemLogDatabase } from "../notion";
 const ItemsPage: NextPage = ({ data }: any) => {
   const { costTodayTotal, items, tableLastUpdated } = data;
   return (
-    <div>
+    <>
       <Head>
         <title>Item log - anguslam.com</title>
         <link rel="icon" href="/favicon.ico" />
@@ -189,7 +189,7 @@ const ItemsPage: NextPage = ({ data }: any) => {
         </table>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const IndexPage: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Angus Lam - anguslam.com</title>
         <link rel="icon" href="/favicon.ico" />
@@ -62,7 +62,7 @@ const IndexPage: NextPage = () => {
         </ul>
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
