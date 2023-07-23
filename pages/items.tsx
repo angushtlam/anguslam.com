@@ -10,7 +10,7 @@ const ItemsPage: NextPage = ({ data }: any) => {
   return (
     <>
       <Head>
-        <title>Item log - anguslam.com</title>
+        <title>Item log | Angus Lam - anguslam.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
