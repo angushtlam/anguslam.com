@@ -9,7 +9,7 @@ async function personalItemLogDatabase() {
     database_id: `${process.env.PERSONAL_ITEM_LOG_DATABASE}`,
   });
 
-  let tableLastUpdated = new Date();
+
   const items = results
     .filter((item: any) => !item.properties["Hide online"].checkbox)
     .map((item: any) => {
@@ -21,11 +21,6 @@ async function personalItemLogDatabase() {
         item.properties.Cost.number -
           item.properties["Days owned"].formula.number
       );
-
-      const lastEditedTime = new Date(item.last_edited_time);
-      if (tableLastUpdated > lastEditedTime) {
-        tableLastUpdated = lastEditedTime;
-      }
 
       return {
         id: item.id,
@@ -47,7 +42,6 @@ async function personalItemLogDatabase() {
     costTodayTotal: items.reduce((total: Number, item: any) => {
       return total + item.costPerDay;
     }, 0),
-    tableLastUpdated: tableLastUpdated.toDateString(),
   };
 }
 

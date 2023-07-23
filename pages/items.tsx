@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import { personalItemLogDatabase } from "../notion";
 
 const ItemsPage: NextPage = ({ data }: any) => {
-  const { costTodayTotal, items, tableLastUpdated } = data;
+  const { costTodayTotal, items } = data;
   return (
     <>
       <Head>
@@ -141,8 +141,6 @@ const ItemsPage: NextPage = ({ data }: any) => {
           Items logged: {items.length}
           <br />
           Cost today for all items: ${costTodayTotal}
-          <br />
-          Last updated: {tableLastUpdated}
         </p>
         <table className="border border-black table-auto">
           <thead>
