@@ -14,10 +14,14 @@ const ItemsPage: NextPage = ({ data }: any) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="inline font-bold text-4xl">personal item log</h1>
-        <Link href="/" passHref>
-          <a className="ml-2 text-blue-500 underline">back to home</a>
-        </Link>
+        <div className="mb-4">
+          <hr className="mb-2" />
+          <Link href="/" passHref>
+            <a className="ml-1 text-blue-500 underline">../ Angus Lam</a>
+          </Link>
+          <hr className="mt-2" />
+        </div>
+        <h1 className="inline font-bold text-4xl">Personal item log</h1>
         <p className="mb-4">Trying this idea out.</p>
         <p className="mb-4">
           An incremental approach on identifying essentials, responsible
