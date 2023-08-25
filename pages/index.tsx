@@ -24,7 +24,7 @@ const IndexPage: NextPage = () => {
             <ul className="list-disc">
               <li className="ml-8">
                 <Link href="https://angus.dev/photos-migration.html" passHref>
-                  <a className="text-blue-500 underline" target="_blank">
+                  <a className="text-blue-500 underline">
                     "My migration from iCloud Photos to Google Photos went so
                     terribly that I had to write Python scripts and it still
                     took 80 hours"
@@ -36,7 +36,7 @@ const IndexPage: NextPage = () => {
                   href="https://angus.dev/building-a-student-tech-community.html"
                   passHref
                 >
-                  <a className="text-blue-500 underline" target="_blank">
+                  <a className="text-blue-500 underline">
                     "Building a student tech community"
                   </a>
                 </Link>{" "}
@@ -44,7 +44,7 @@ const IndexPage: NextPage = () => {
               </li>
               <li className="ml-8">
                 <Link href="https://angus.dev/" passHref>
-                  <a className="text-blue-500 underline" target="_blank">
+                  <a className="text-blue-500 underline">
                     See all posts…
                   </a>
                 </Link>
