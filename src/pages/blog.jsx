@@ -81,4 +81,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>All blog posts - Angus Lam</title>;
+export const Head = () => <title>All blog posts - Angus Lam anguslam.com</title>;

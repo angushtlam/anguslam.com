@@ -11,10 +11,10 @@ export default function ArticleLayout({ children, data }) {
     <div>
       <div>
         <Header breadcrumb="blog">{title}</Header>
-        <div>{children}</div>
-        <div>
+        <main>
+          {children}
           <p>Last updated {updated}</p>
-        </div>
+        </main>
       </div>
       <Footer />
     </div>
@@ -32,3 +32,7 @@ export const query = graphql`
     }
   }
 `;
+
+export const Head = ({ data }) => (
+  <title>{data.mdx.frontmatter.title} - Angus Lam anguslam.com</title>
+);
