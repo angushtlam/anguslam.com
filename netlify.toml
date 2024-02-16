@@ -1,0 +1,41 @@
+[[redirects]]
+  from = "/article"
+  to = "/blog"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/articles"
+  to = "/blog"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/article/triplebyte"
+  to = "/article/triplebyte-college-student"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/article/a-college-students-experience-with-triplebyte"
+  to = "/article/triplebyte-college-student"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/article/react_native_gotchas"
+  to = "/article/react-native-gotchas"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/article/stripe_internship"
+  to = "/article/stripe-internship-2018"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/article/optimizely_internship"
+  to = "/article/optimizely-internship-2017"
+  status = 301
+  force = true
