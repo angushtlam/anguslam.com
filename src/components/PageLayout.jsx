@@ -10,7 +10,7 @@ export default function PageLayout({ children }) {
       className="crt"
       css={css`
         align-items: center;
-        background: #fafafa;
+        background: #111;
         display: flex;
         height: 100%;
         height: 100vh;
