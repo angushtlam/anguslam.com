@@ -31,13 +31,6 @@ const config = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: "pages",
         path: "./src/pages/",
       },
