@@ -73,4 +73,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Angus Lam anguslam.com</title>;
+export const Head = () => <title>Angus Lam - anguslam.com</title>;

@@ -580,4 +580,4 @@ const ItemsPage = () => {
 
 export default ItemsPage;
 
-export const Head = () => <title>Personal item log - Angus Lam anguslam.com</title>;
+export const Head = () => <title>Personal item log | Angus Lam - anguslam.com</title>;

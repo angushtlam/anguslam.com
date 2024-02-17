@@ -34,5 +34,5 @@ export const query = graphql`
 `;
 
 export const Head = ({ data }) => (
-  <title>{data.mdx.frontmatter.title} - Angus Lam anguslam.com</title>
+  <title>{data.mdx.frontmatter.title} | Angus Lam - anguslam.com</title>
 );
