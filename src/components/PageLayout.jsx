@@ -12,7 +12,9 @@ export default function PageLayout({ children }) {
         align-items: center;
         background: #fafafa;
         display: flex;
+        height: 100%;
         height: 100vh;
+        height: 100dvh;
         justify-content: center;
       `}
     >
