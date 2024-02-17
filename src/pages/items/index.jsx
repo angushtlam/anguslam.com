@@ -2,9 +2,8 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import * as React from "react";
 import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import ItemsNotionJpg from "./items_notion.jpg";
 import PageLayout from "../../components/PageLayout";
+import ItemsNotionJpg from "./items_notion.jpg";
 
 const ItemsPage = () => {
   const cssTableCell = css`

@@ -48,6 +48,14 @@ export default function PageLayout({ children }) {
             position: absolute;
             top: -5px;
             width: 100%;
+
+            @media (orientation: portrait) and (max-width: 499px) {
+              display: none;
+            }
+
+            @media (orientation: landscape) and (max-height: 599px) {
+              display: none;
+            }
           `}
         />
         <div
@@ -59,6 +67,14 @@ export default function PageLayout({ children }) {
             left: 0;
             position: absolute;
             width: 100%;
+
+            @media (orientation: portrait) and (max-width: 499px) {
+              display: none;
+            }
+
+            @media (orientation: landscape) and (max-height: 599px) {
+              display: none;
+            }
           `}
         />
         <div
@@ -70,6 +86,14 @@ export default function PageLayout({ children }) {
             position: absolute;
             top: 0;
             width: 10px;
+
+            @media (orientation: portrait) and (max-width: 499px) {
+              display: none;
+            }
+
+            @media (orientation: landscape) and (max-height: 599px) {
+              display: none;
+            }
           `}
         />
         <div
@@ -81,6 +105,14 @@ export default function PageLayout({ children }) {
             position: absolute;
             right: -5px;
             width: 10px;
+
+            @media (orientation: portrait) and (max-width: 499px) {
+              display: none;
+            }
+
+            @media (orientation: landscape) and (max-height: 599px) {
+              display: none;
+            }
           `}
         />
         <div

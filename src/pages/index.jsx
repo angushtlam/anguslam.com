@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import * as React from "react";
 
@@ -6,8 +7,20 @@ import PageLayout from "../components/PageLayout";
 const IndexPage = () => {
   return (
     <PageLayout>
-      <h1>
-        Index of /<span>Angus Lam</span>/
+      <h1
+        css={css`
+          color: #aaa;
+        `}
+      >
+        Index of /
+        <span
+          css={css`
+            color: #000;
+          `}
+        >
+          Angus Lam
+        </span>
+        /
       </h1>
       <p>
         Welcome, you've made it to my website. I have a few things to share.
