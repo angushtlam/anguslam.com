@@ -1,23 +1,18 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
+import PageLayout from "../components/PageLayout";
 import "../styles/markdown.css";
 
 export default function ArticleLayout({ children, data }) {
   const { title, updated } = data.mdx.frontmatter;
 
   return (
-    <div>
-      <div>
-        <Header breadcrumb="blog">{title}</Header>
-        <main>
-          {children}
-          <p>Last updated {updated}</p>
-        </main>
-      </div>
-      <Footer />
-    </div>
+    <PageLayout>
+      <Header breadcrumb="blog">{title}</Header>
+      {children}
+      <p>Last updated {updated}</p>
+    </PageLayout>
   );
 }
 
