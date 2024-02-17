@@ -118,6 +118,8 @@ export default function PageLayout({ children }) {
         <div
           css={css`
             background: #ffffff;
+            display: flex;
+            flex-direction: column;
             height: 100%;
             overflow: auto;
             padding: 5px;
@@ -126,12 +128,20 @@ export default function PageLayout({ children }) {
         >
           <main
             css={css`
+              flex-grow: 1;
               padding-bottom: 200px;
             `}
           >
             {children}
           </main>
-          <Footer />
+          <div
+            css={css`
+              flex-grow: 0;
+              flex-shrink: 0;
+            `}
+          >
+            <Footer />
+          </div>
         </div>
       </div>
     </div>
