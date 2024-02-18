@@ -86,6 +86,7 @@ h6 {
   display: block;
   content: " ";
   position: absolute;
+  opacity: 0.15;
   top: 0;
   left: 0;
   bottom: 0;
