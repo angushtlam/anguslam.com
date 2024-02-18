@@ -10,7 +10,8 @@ export default function PageLayout({ children }) {
       className="crt"
       css={css`
         align-items: center;
-        background: #111;
+        background: #222;
+        background: linear-gradient(#222, #333);
         display: flex;
         height: 100%;
         height: 100vh;
@@ -131,7 +132,7 @@ export default function PageLayout({ children }) {
           <main
             css={css`
               flex-grow: 1;
-              padding-bottom: 200px;
+              padding-bottom: 300px;
             `}
           >
             {children}
@@ -142,6 +143,7 @@ export default function PageLayout({ children }) {
               flex-shrink: 0;
             `}
           >
+            <hr />
             <Footer />
           </div>
         </div>

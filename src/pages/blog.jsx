@@ -3,11 +3,13 @@ import * as React from "react";
 
 import Header from "../components/Header";
 import PageLayout from "../components/PageLayout";
+import { SEO } from "../components/SEO";
 
 const IndexPage = () => {
   return (
     <PageLayout>
       <Header>All blog posts</Header>
+      <hr />
       <ul>
         <li>
           Computers
@@ -72,5 +74,5 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => (
-  <title>All blog posts | Angus Lam - anguslam.com</title>
+  <SEO title="All blog posts | Angus Lam - anguslam.com" />
 );

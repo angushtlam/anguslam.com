@@ -3,10 +3,11 @@ import remarkGfm from "remark-gfm";
 const config = {
   siteMetadata: {
     siteUrl: "https://anguslam.com",
-    title: "Angus Lam - Software Engineer",
-    description: `Angus Lam is a software engineer based in New York City with experience working at technology startups from small to large. This is his website where he shares his projects and writing.`,
+    title: "Angus Lam - anguslam.com",
+    description: `Angus is a software engineer with experience working at technology startups like Stripe, Lugg, Optimizely, and more. This is his personal website where he shares his work, knowledge, experiences, and other topics he finds interesting.`,
     social: {
       linkedIn: `angushtlam`,
+      threads: `angustofar`,
       twitter: `angushtlam`,
     },
   },

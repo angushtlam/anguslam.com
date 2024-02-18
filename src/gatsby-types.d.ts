@@ -2540,21 +2540,25 @@ type SiteSiteMetadataFilterInput = {
 
 type SiteSiteMetadataSocial = {
   readonly linkedIn: Maybe<Scalars['String']>;
+  readonly threads: Maybe<Scalars['String']>;
   readonly twitter: Maybe<Scalars['String']>;
 };
 
 type SiteSiteMetadataSocialFieldSelector = {
   readonly linkedIn: InputMaybe<FieldSelectorEnum>;
+  readonly threads: InputMaybe<FieldSelectorEnum>;
   readonly twitter: InputMaybe<FieldSelectorEnum>;
 };
 
 type SiteSiteMetadataSocialFilterInput = {
   readonly linkedIn: InputMaybe<StringQueryOperatorInput>;
+  readonly threads: InputMaybe<StringQueryOperatorInput>;
   readonly twitter: InputMaybe<StringQueryOperatorInput>;
 };
 
 type SiteSiteMetadataSocialSortInput = {
   readonly linkedIn: InputMaybe<SortOrderEnum>;
+  readonly threads: InputMaybe<SortOrderEnum>;
   readonly twitter: InputMaybe<SortOrderEnum>;
 };
 

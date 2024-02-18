@@ -2,28 +2,57 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import * as React from "react";
 
+import meJpg from "../images/me.jpg";
 import PageLayout from "../components/PageLayout";
+import { SEO } from "../components/SEO";
 
 const IndexPage = () => {
   return (
     <PageLayout>
       <h1
         css={css`
-          color: #aaa;
+          color: #696969;
         `}
       >
         Index of /
         <span
           css={css`
-            color: #000;
+            color: #222;
           `}
         >
           Angus Lam
         </span>
         /
       </h1>
+      <hr />
       <p>
-        Welcome, you've made it to my website. I have a few things to share.
+        Hello! Welcome! You made it to my website and I'm so glad to see you
+        here.
+      </p>
+      <img
+        alt="Picture of Angus Lam"
+        css={css`
+          max-height: 350px;
+          max-width: 100%;
+        `}
+        src={meJpg}
+      />
+      <p>
+        My name is Angus, a software engineer based in New York currently at
+        Stripe. My skills include full-stack engineering, product design, and
+        project management, and I specialize in building technology enabled
+        products with delightful experiences.
+      </p>
+      <p>
+        I have experience working at technology startups of sizes small and
+        large in San Francisco, New York, and Buffalo. Before Stripe, I've
+        worked at Lugg, Optimizely, and a few Buffalo startups. I've built
+        software from zero-to-one MVPs to scalable enterprise grade features.
+      </p>
+      <p>
+        On this site, you'll find a collection of my professional and personal
+        work from a breadth of my interests, hobbies, adventures, and
+        brainworms.
       </p>
       <ul>
         <li>
@@ -49,11 +78,13 @@ const IndexPage = () => {
           </ul>
         </li>
         <li>
-          Projects
+          Personal projects
           <ul>
             <li>
               <Link to="https://kindredunspirits.com">Kindred Unspirits</Link>{" "}
-              Holographic stickers of household items
+              Holographic stickers of household items. I designed and built this
+              store to learn how physical items are sold online. The store is
+              rated five stars <em>(so far)</em>.
             </li>
             <li>
               <Link to="/items">Personal item log</Link> An experiment in
@@ -78,4 +109,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Angus Lam - anguslam.com</title>;
+export const Head = () => <SEO />;

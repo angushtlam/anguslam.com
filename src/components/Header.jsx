@@ -14,7 +14,7 @@ export default function Header({ breadcrumb, children }) {
         {breadcrumb === "blog" && (
           <>
             {" / "}
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">All blog posts</Link>
           </>
         )}
       </h2>

@@ -4,6 +4,7 @@ import * as React from "react";
 import Header from "../../components/Header";
 import PageLayout from "../../components/PageLayout";
 import ItemsNotionJpg from "./items_notion.jpg";
+import { SEO } from "../../components/SEO";
 
 const ItemsPage = () => {
   const cssTableCell = css`
@@ -577,5 +578,5 @@ const ItemsPage = () => {
 export default ItemsPage;
 
 export const Head = () => (
-  <title>Personal item log | Angus Lam - anguslam.com</title>
+  <SEO title="Personal item log | Angus Lam - anguslam.com" />
 );
