@@ -20,6 +20,19 @@ const config = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Angus Lam - anguslam.com`,
+        short_name: `Angus Lam`,
+        start_url: `/`,
+        icon: `src/images/me.jpg`,
+        background_color: `#222222`,
+        theme_color: `#0000ee`,
+        display: `standalone`,
+        legacy: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
