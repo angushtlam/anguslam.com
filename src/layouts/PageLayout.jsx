@@ -3,6 +3,7 @@ import * as React from "react";
 
 import Footer from "../components/Footer";
 import "../styles/index.css";
+import "../styles/crt.css";
 
 export default function PageLayout({ children }) {
   return (

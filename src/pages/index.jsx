@@ -2,9 +2,9 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import * as React from "react";
 
-import meJpg from "../images/me.jpg";
-import PageLayout from "../components/PageLayout";
 import { SEO } from "../components/SEO";
+import meJpg from "../images/me.jpg";
+import PageLayout from "../layouts/PageLayout";
 
 const IndexPage = () => {
   return (

@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 import Header from "../components/Header";
-import PageLayout from "../components/PageLayout";
+import PageLayout from "./PageLayout";
 import "../styles/markdown.css";
 import { SEO } from "../components/SEO";
 
@@ -11,7 +11,6 @@ export default function ArticleLayout({ children, data }) {
   return (
     <PageLayout>
       <Header breadcrumb="blog">{title}</Header>
-      <hr />
       {children}
       <p>Last updated {updated}</p>
     </PageLayout>

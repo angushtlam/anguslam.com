@@ -19,6 +19,7 @@ export default function Header({ breadcrumb, children }) {
         )}
       </h2>
       <h1>{children}</h1>
+      <hr />
     </>
   );
 }

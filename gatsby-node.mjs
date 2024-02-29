@@ -1,5 +1,5 @@
 import path from "path";
-const mdxTemplate = path.resolve("./src/templates/ArticleLayout.jsx");
+const mdxTemplate = path.resolve("./src/layouts/ArticleLayout.jsx");
 
 export const createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`

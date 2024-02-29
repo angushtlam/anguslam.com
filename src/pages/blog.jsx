@@ -2,14 +2,13 @@ import { Link } from "gatsby";
 import * as React from "react";
 
 import Header from "../components/Header";
-import PageLayout from "../components/PageLayout";
 import { SEO } from "../components/SEO";
+import PageLayout from "../layouts/PageLayout";
 
 const IndexPage = () => {
   return (
     <PageLayout>
       <Header>All blog posts</Header>
-      <hr />
       <ul>
         <li>
           Computers

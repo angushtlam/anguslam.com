@@ -1,8 +1,8 @@
+import { css } from "@emotion/react";
 import { Link } from "gatsby";
 import * as React from "react";
-import PageLayout from "../components/PageLayout";
-import { css } from "@emotion/react";
 import { SEO } from "../components/SEO";
+import PageLayout from "../layouts/PageLayout";
 
 const NotFoundPage = () => {
   return (
