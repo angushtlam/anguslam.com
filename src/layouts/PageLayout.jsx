@@ -47,10 +47,10 @@ export default function PageLayout({ children }) {
           css={css`
             background: #ffffff;
             border-radius: 50%;
-            height: 10px;
+            height: 20px;
             left: 0;
             position: absolute;
-            top: -5px;
+            top: -10px;
             width: 100%;
 
             @media (orientation: portrait) and (max-width: 499px) {
@@ -66,8 +66,8 @@ export default function PageLayout({ children }) {
           css={css`
             background: #ffffff;
             border-radius: 50%;
-            bottom: -5px;
-            height: 10px;
+            bottom: -10px;
+            height: 20px;
             left: 0;
             position: absolute;
             width: 100%;
@@ -86,10 +86,10 @@ export default function PageLayout({ children }) {
             background: #ffffff;
             border-radius: 50%;
             height: 100%;
-            left: -5px;
+            left: -10px;
             position: absolute;
             top: 0;
-            width: 10px;
+            width: 20px;
 
             @media (orientation: portrait) and (max-width: 499px) {
               display: none;
@@ -107,8 +107,8 @@ export default function PageLayout({ children }) {
             bottom: 0px;
             height: 100%;
             position: absolute;
-            right: -5px;
-            width: 10px;
+            right: -10px;
+            width: 20px;
 
             @media (orientation: portrait) and (max-width: 499px) {
               display: none;
@@ -126,7 +126,7 @@ export default function PageLayout({ children }) {
             flex-direction: column;
             height: 100%;
             overflow: auto;
-            padding: 5px;
+            padding: 10px;
             width: 100%;
           `}
         >

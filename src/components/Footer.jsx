@@ -34,15 +34,6 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://www.threads.net/@angustofar"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Threads
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://twitter.com/angushtlam"
                 rel="noreferrer"
                 target="_blank"
