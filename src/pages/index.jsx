@@ -91,6 +91,12 @@ const IndexPage = () => {
               maintaining a catalog of personal belongings
             </li>
             <li>
+              <Link to="https://angus.dev/ads-privacy">
+                The ads are following me
+              </Link>{" "}
+              - an interactive site about behavioral retargeting
+            </li>
+            <li>
               <a
                 href="https://instagram.com/angustofar"
                 rel="noreferrer"
