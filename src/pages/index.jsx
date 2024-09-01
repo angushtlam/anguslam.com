@@ -60,14 +60,14 @@ const IndexPage = () => {
           <ul>
             <li>
               <Link to="/photos-migration">
-                "My migration from iCloud Photos to Google Photos went so
+                “My migration from iCloud Photos to Google Photos went so
                 terribly that I had to write Python scripts and it still took 80
-                hours"
+                hours”
               </Link>
             </li>
             <li>
               <Link to="/building-a-student-tech-community">
-                "Building a student tech community"
+                “Building a student tech community”
               </Link>{" "}
               How I organized UB ACM, my alma mater's computer science club,
               from 2017-2019.
@@ -92,7 +92,7 @@ const IndexPage = () => {
             </li>
             <li>
               <Link to="https://angus.dev/ads-privacy">
-                The ads are following me
+                “The Ads Are Following Me!”
               </Link>{" "}
               - an interactive site about behavioral retargeting
             </li>
