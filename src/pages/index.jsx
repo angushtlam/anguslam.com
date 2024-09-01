@@ -94,7 +94,7 @@ const IndexPage = () => {
               <Link to="https://angus.dev/ads-privacy">
                 “The Ads Are Following Me!”
               </Link>{" "}
-              - an interactive site about behavioral retargeting
+              - a visual story website about online advertising and retargeting
             </li>
             <li>
               <a
