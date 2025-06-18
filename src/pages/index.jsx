@@ -91,7 +91,7 @@ const IndexPage = () => {
         software development, product design, and project management. I
         specialize in building technology enabled products with visually
         beautiful and delightful experiences. I led and shipped these externally
-        visible ships:
+        visible projects:
         <ul>
           <li>
             <Link to="https://privacy.stripe.com">Privacy Portal</Link>
