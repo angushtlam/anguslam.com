@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
-import * as React from "react";
 
 import { SEO } from "../components/SEO";
 import meJpg from "../images/me.jpg";
@@ -25,10 +24,7 @@ const IndexPage = () => {
         /
       </h1>
       <hr />
-      <p>
-        Hello! Welcome! You made it to my website and I'm so glad to see you
-        here.
-      </p>
+      <p>Hello! Welcome! I am Angus from New York.</p>
       <img
         alt="Picture of Angus Lam"
         css={css`
@@ -37,23 +33,6 @@ const IndexPage = () => {
         `}
         src={meJpg}
       />
-      <p>
-        My name is Angus, a software engineer based in New York currently at
-        Stripe. My skills include full-stack engineering, product design, and
-        project management, and I specialize in building technology enabled
-        products with delightful experiences.
-      </p>
-      <p>
-        I have experience working at technology startups of sizes small and
-        large in San Francisco, New York, and Buffalo. Before Stripe, I've
-        worked at Lugg, Optimizely, and a few Buffalo startups. I've built
-        software from zero-to-one MVPs to scalable enterprise grade features.
-      </p>
-      <p>
-        On this site, you'll find a collection of my professional and personal
-        work from a breadth of my interests, hobbies, adventures, and
-        brainworms.
-      </p>
       <ul>
         <li>
           Blog
@@ -81,12 +60,6 @@ const IndexPage = () => {
           Personal projects
           <ul>
             <li>
-              <Link to="https://kindredunspirits.com">Kindred Unspirits</Link>{" "}
-              Holographic stickers of household items. I designed and built this
-              store to learn how physical items are sold online. The store is
-              rated five stars <em>(so far)</em>.
-            </li>
-            <li>
               <Link to="/items">Personal item log</Link> An experiment in
               maintaining a catalog of personal belongings
             </li>
@@ -97,18 +70,47 @@ const IndexPage = () => {
               - a visual story website about online advertising and retargeting
             </li>
             <li>
-              <a
-                href="https://instagram.com/angustofar"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Travel Instagram
-              </a>{" "}
-              Editorials of the places I've traveled
+              <Link to="https://kindredunspirits.com">Kindred Unspirits</Link>{" "}
+              Holographic stickers of household items. I designed them and built
+              an online store to learn how physical items are sold online. The
+              store was rated five stars until I shut it down.
             </li>
           </ul>
         </li>
       </ul>
+      <hr />
+      <p>
+        On my website, you'll find a collection of my professional and personal
+        work from a breadth of my interests, hobbies, adventures, and
+        brainworms.
+      </p>
+      <p>
+        My main job is working as a software engineer at{" "}
+        <Link to="https://stripe.com">Stripe</Link>. I have six years of tenure
+        building security and privacy applications. My skills include full-stack
+        software development, product design, and project management. I
+        specialize in building technology enabled products with visually
+        beautiful and delightful experiences. I led and shipped these externally
+        visible ships:
+        <ul>
+          <li>
+            <Link to="https://privacy.stripe.com">Privacy Portal</Link>
+          </li>
+          <li>
+            <Link to="https://docs.stripe.com/privacy/redaction">
+              Redaction API
+            </Link>
+          </li>
+        </ul>
+      </p>
+      <p>
+        I have experience working at technology startups of sizes small and
+        large in San Francisco, New York, and Buffalo <em>(go Bills)</em>.
+        Before Stripe, I worked at <Link to="https://lugg.com">Lugg</Link>,{" "}
+        <Link to="https://optimizely.com">Optimizely</Link>, and a few Buffalo
+        startups. I built software from zero-to-one MVPs to scalable
+        enterprise grade features.
+      </p>
     </PageLayout>
   );
 };

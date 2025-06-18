@@ -41,6 +41,24 @@ export default function Footer() {
                 Twitter/X
               </a>
             </li>
+            <li>
+              <a
+                href="https://bsky.app/profile/anguslam.com"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Bluesky
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/angustofar"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Instagram
+              </a>
+            </li>
           </ul>
         </div>
         <div
@@ -53,13 +71,11 @@ export default function Footer() {
             I have very fond memories of snooping autoindex pages on poorly
             configured servers back in the late 2000s. It's hard to find those
             nowadays. "Browser default" HTML also has a brutalistic and
-            uninstrusive quality in the comtemporary time. It has allowed me to
-            focus on creating more novel works rather than tweaking every pixel
-            on this site to stylistically tie together everything I work on, no
-            matter how disparate, in a futile manner. That is not to say there's
-            no styling here—every detail is still meticulously chosen. I could
-            have went for a more conventional modern minimalist design, but
-            what's the fun in that?
+            uninstrusive quality. I think this makes a great foundation for me
+            to share all kinds of things I do. That is not to say there's no
+            styling here—every detail is still meticulously chosen. I could have
+            went for a more conventional modern minimalist design, but what's
+            the fun in that?
           </p>
         </div>
       </div>
