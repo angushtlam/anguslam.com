@@ -108,8 +108,8 @@ const IndexPage = () => {
         large in San Francisco, New York, and Buffalo <em>(go Bills)</em>.
         Before Stripe, I worked at <Link to="https://lugg.com">Lugg</Link>,{" "}
         <Link to="https://optimizely.com">Optimizely</Link>, and a few Buffalo
-        startups. I built software from zero-to-one MVPs to scalable
-        enterprise grade features.
+        startups. I built software from zero-to-one MVPs to scalable enterprise
+        grade features.
       </p>
     </PageLayout>
   );

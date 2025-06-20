@@ -1,11 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build outputs
 /public
+.cache/
+
+# Generated files
+gatsby-types.d.ts
+
+# Package manager files
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
 
 # Vercel
 .vercel
 
 # Next.JS
 .next/
-.cache/
 .upm/
 
 # TypeScript

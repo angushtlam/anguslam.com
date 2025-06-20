@@ -13,9 +13,13 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "lint": "eslint . --ext md,mdx"
+    "lint": "eslint . --ext md,mdx",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "claude": "claude"
   },
   "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.30",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "gatsby": "^5.13.3",
@@ -37,6 +41,7 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-plugin-mdx": "^3.1.5",
-    "gatsby-cli": "^5.13.2"
+    "gatsby-cli": "^5.13.2",
+    "prettier": "^3.5.3"
   }
 }
