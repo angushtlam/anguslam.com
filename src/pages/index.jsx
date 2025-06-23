@@ -24,7 +24,7 @@ const IndexPage = () => {
         /
       </h1>
       <hr />
-      <p>Hello! Welcome! I am Angus from New York.</p>
+      <p>Hello! I am Angus. Welcome to my website!</p>
       <img
         alt="Picture of Angus Lam"
         css={css`
@@ -34,6 +34,57 @@ const IndexPage = () => {
         src={meJpg}
       />
       <ul>
+        <li>
+          My side projects
+          <ul>
+            <li>
+              <Link to="https://moodboring.com" target="_blank">
+                Moodboring
+              </Link>{" "}
+              Browser-based photo editor with a lot of <em>(my)</em> personality
+            </li>
+            <li>
+              <Link to="/items">Personal item log</Link> An experiment in
+              maintaining a catalog of personal belongings
+            </li>
+            <li>
+              <Link to="https://angus.dev/ads-privacy" target="_blank">
+                “The Ads Are Following Me!”
+              </Link>{" "}
+              Visual story website about online advertising and retargeting
+            </li>
+            <li>
+              <Link to="https://kindredunspirits.com" target="_blank">
+                Kindred Unspirits
+              </Link>{" "}
+              Holographic stickers of household items. I designed them and built
+              an online store to learn how physical items are sold online. The
+              store was rated five stars until I shut it down.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Professional work - Externally visible projects I've led and shipped
+          at{" "}
+          <Link to="https://stripe.com" target="_blank">
+            Stripe
+          </Link>
+          <ul>
+            <li>
+              <Link to="https://privacy.stripe.com" target="_blank">
+                Privacy Portal
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="https://docs.stripe.com/privacy/redaction"
+                target="_blank"
+              >
+                Redaction API
+              </Link>
+            </li>
+          </ul>
+        </li>
         <li>
           Blog
           <ul>
@@ -56,57 +107,24 @@ const IndexPage = () => {
             </li>
           </ul>
         </li>
-        <li>
-          Personal projects
-          <ul>
-            <li>
-              <Link to="/items">Personal item log</Link> An experiment in
-              maintaining a catalog of personal belongings
-            </li>
-            <li>
-              <Link to="https://angus.dev/ads-privacy">
-                “The Ads Are Following Me!”
-              </Link>{" "}
-              - a visual story website about online advertising and retargeting
-            </li>
-            <li>
-              <Link to="https://kindredunspirits.com">Kindred Unspirits</Link>{" "}
-              Holographic stickers of household items. I designed them and built
-              an online store to learn how physical items are sold online. The
-              store was rated five stars until I shut it down.
-            </li>
-          </ul>
-        </li>
       </ul>
       <hr />
       <p>
-        On my website, you'll find a collection of my professional and personal
-        work from a breadth of my interests, hobbies, adventures, and
-        brainworms.
+        You'll find a collection of my work here, from a breadth of my
+        interests, hobbies, adventures, and brainworms.
       </p>
       <p>
-        My main job is working as a software engineer at{" "}
-        <Link to="https://stripe.com">Stripe</Link>. I have six years of tenure
-        building security and privacy applications. My skills include full-stack
-        software development, product design, and project management. I
-        specialize in building technology enabled products with visually
-        beautiful and delightful experiences. I led and shipped these externally
-        visible projects:
-        <ul>
-          <li>
-            <Link to="https://privacy.stripe.com">Privacy Portal</Link>
-          </li>
-          <li>
-            <Link to="https://docs.stripe.com/privacy/redaction">
-              Redaction API
-            </Link>
-          </li>
-        </ul>
+        My main job is working as a software engineer at Stripe. I have six
+        years of tenure building security and privacy applications, and over a
+        decade of programming experience. My skills include full-stack software
+        development, product design, and project management. I specialize in
+        building technology enabled products with visually beautiful and
+        delightful experiences.
       </p>
       <p>
-        I have experience working at technology startups of sizes small and
-        large in San Francisco, New York, and Buffalo <em>(go Bills)</em>.
-        Before Stripe, I worked at <Link to="https://lugg.com">Lugg</Link>,{" "}
+        I worked at technology startups of sizes large and small in San
+        Francisco, New York, and Buffalo <em>(go Bills)</em>. Before Stripe, I
+        worked at <Link to="https://lugg.com">Lugg</Link>,{" "}
         <Link to="https://optimizely.com">Optimizely</Link>, and a few Buffalo
         startups. I built software from zero-to-one MVPs to scalable enterprise
         grade features.
