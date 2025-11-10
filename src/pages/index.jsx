@@ -49,7 +49,7 @@ const IndexPage = () => {
           maintaining a catalog of personal belongings
         </li>
         <li>
-          <Link to="https://angushtlam.github.io/ads-privacy/" target="_blank">
+          <Link to="https://ads.angus.dev/" target="_blank">
             “The Ads Are Following Me!”
           </Link>{" "}
           Visual story website about online advertising and retargeting
