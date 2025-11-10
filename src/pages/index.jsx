@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
 import { SEO } from "../components/SEO";
-import meJpg from "../images/me.jpg";
+import meJpg from "../images/me_small.jpeg";
 import PageLayout from "../layouts/PageLayout";
 
 const IndexPage = () => {
@@ -24,7 +24,11 @@ const IndexPage = () => {
         /
       </h1>
       <hr />
-      <p>Hello! I am Angus. Welcome to my website!</p>
+      <p>
+        Hello! I am Angus. Welcome to my website! You'll find a collection of my
+        work here, from a breadth of my interests, hobbies, adventures, and
+        brainworms.
+      </p>
       <img
         alt="Picture of Angus Lam"
         css={css`
@@ -35,55 +39,34 @@ const IndexPage = () => {
       />
       <ul>
         <li>
-          My side projects
-          <ul>
-            <li>
-              <Link to="https://moodboring.com" target="_blank">
-                Moodboring
-              </Link>{" "}
-              Browser-based photo editor with a lot of <em>(my)</em> personality
-            </li>
-            <li>
-              <Link to="/items">Personal item log</Link> An experiment in
-              maintaining a catalog of personal belongings
-            </li>
-            <li>
-              <Link to="https://angus.dev/ads-privacy" target="_blank">
-                “The Ads Are Following Me!”
-              </Link>{" "}
-              Visual story website about online advertising and retargeting
-            </li>
-            <li>
-              <Link to="https://kindredunspirits.com" target="_blank">
-                Kindred Unspirits
-              </Link>{" "}
-              Holographic stickers of household items. I designed them and built
-              an online store to learn how physical items are sold online. The
-              store was rated five stars until I shut it down.
-            </li>
-          </ul>
+          <Link to="https://moodboring.com" target="_blank">
+            Moodboring
+          </Link>{" "}
+          Browser-based photo editor with a lot of <em>(my)</em> personality
         </li>
         <li>
-          Professional work - Externally visible projects I've led and shipped
-          at{" "}
-          <Link to="https://stripe.com" target="_blank">
-            Stripe
-          </Link>
-          <ul>
-            <li>
-              <Link to="https://privacy.stripe.com" target="_blank">
-                Privacy Portal
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="https://docs.stripe.com/privacy/redaction"
-                target="_blank"
-              >
-                Redaction API
-              </Link>
-            </li>
-          </ul>
+          <Link to="/items">Personal item log</Link> An experiment in
+          maintaining a catalog of personal belongings
+        </li>
+        <li>
+          <Link to="https://angushtlam.github.io/ads-privacy/" target="_blank">
+            “The Ads Are Following Me!”
+          </Link>{" "}
+          Visual story website about online advertising and retargeting
+        </li>
+        <li>
+          <Link to="https://kindredunspirits.com" target="_blank">
+            Kindred Unspirits
+          </Link>{" "}
+          Holographic stickers of household items. I designed them and built an
+          online store to learn how physical items are sold online. The store
+          was rated five stars until I shut it down.
+        </li>
+        <li>
+          <Link to="https://angus.dev" target="_blank">
+            angus.dev
+          </Link>{" "}
+          My day job. I write code for a living.
         </li>
         <li>
           Blog
@@ -108,27 +91,6 @@ const IndexPage = () => {
           </ul>
         </li>
       </ul>
-      <hr />
-      <p>
-        You'll find a collection of my work here, from a breadth of my
-        interests, hobbies, adventures, and brainworms.
-      </p>
-      <p>
-        My main job is working as a software engineer at Stripe. I have six
-        years of tenure building security and privacy applications, and over a
-        decade of programming experience. My skills include full-stack software
-        development, product design, and project management. I specialize in
-        building technology enabled products with visually beautiful and
-        delightful experiences.
-      </p>
-      <p>
-        I worked at technology startups of sizes large and small in San
-        Francisco, New York, and Buffalo <em>(go Bills)</em>. Before Stripe, I
-        worked at <Link to="https://lugg.com">Lugg</Link>,{" "}
-        <Link to="https://optimizely.com">Optimizely</Link>, and a few Buffalo
-        startups. I built software from zero-to-one MVPs to scalable enterprise
-        grade features.
-      </p>
     </PageLayout>
   );
 };

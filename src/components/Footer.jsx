@@ -25,33 +25,6 @@ export default function Footer() {
           <ul>
             <li>
               <a
-                href="https://linkedin.com/in/angushtlam"
-                rel="noreferrer"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/angushtlam"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Twitter/X
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://bsky.app/profile/anguslam.com"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Bluesky
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://instagram.com/angustofar"
                 rel="noreferrer"
                 target="_blank"
