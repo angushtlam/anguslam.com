@@ -25,6 +25,15 @@ export default function Footer() {
           <ul>
             <li>
               <a
+                href="https://angushtlam.substack.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Substack
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://instagram.com/angustofar"
                 rel="noreferrer"
                 target="_blank"

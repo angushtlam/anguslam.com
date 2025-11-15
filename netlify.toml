@@ -27,3 +27,9 @@
   to = "/optimizely-internship-2017"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/building-a-student-tech-community"
+  to = "https://angushtlam.substack.com/p/building-a-student-tech-community"
+  status = 301
+  force = true

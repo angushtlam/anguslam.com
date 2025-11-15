@@ -55,16 +55,6 @@ const IndexPage = () => {
             </li>
           </ul>
         </li>
-        <li>
-          Misc
-          <ul>
-            <li>
-              <Link to="/evergreen-writing">
-                "Uh, are your articles up-to-date?"
-              </Link>
-            </li>
-          </ul>
-        </li>
       </ul>
     </PageLayout>
   );
