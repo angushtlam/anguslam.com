@@ -1,0 +1,114 @@
+---
+title: My Stripe internship 2018
+published: true
+created: 2018-11-15
+updated: 2018-11-15
+---
+
+This summer I returned to San Francisco to work at Stripe as a Software Engineer Intern.
+
+## The internship search gameplan
+
+A year ago, I had the opportunity to intern at Optimizely. I enjoyed it a lot, but I wanted to try to work in a different environment to broaden my horizons. A lot of the more well-established tech startups don't recruit out of UB, so that means I had to apply online and hoped for a response. It was pretty nerve racking but I think having the Optimizely internship (anecdotally) made it easier to find other internships.
+
+Although I applied to places mostly indiscriminately through their career sites, I had a couple of points in mind when I made my final decision on where I’d like to work:
+
+- The technologies the company worked with - I wanted to work with full stack tech like Python, Ruby, Node, Vue, and/or React
+- The size of the organization - Wanted to work at a slightly bigger startup
+- Alignment with the products/services of the company - I wanted to contribute to something I would use
+- Location - I wanted to go back to the Bay Area
+
+Of course, not all of the companies I applied to fit these criteria, but it did play a lot into my consideration for when I had to make a decision. I interviewed with a few other companies, but ultimately I accepted the internship with Stripe in late November 2017.
+
+## Experience on the frontline
+
+I joined Frontline Experience, an engineering team that owned Stripe’s customer support infrastructure and tooling. There's support.stripe.com, internal dashboards for Stripes (Stripe employees) and vendor agents, and the systems for email tickets, live chats, and more recently premium user dashboard support.
+
+Specifically, I joined Lumos, a sub-team of Frontline Experience working on internal tooling for Stripe’s support agents and user operations teams. The name of the team happens to share the same name as the support agent-facing tool, Lumos.
+
+The size of your team at Stripe greatly depends on what you're working on, and Lumos is one of the smaller teams. Although Stripe is way past "scrappy startup" at this point, I still had a lot of opportunities to work in different parts of the stack and fill different roles.
+
+## It’s not just about resetting passwords
+
+Now you’re probably thinking, Stripe is building an amazing payments infrastructure that many companies use as their financial backbone, and you're on the customer support team? That’s kind of lame... Right?
+
+Well, I thought the same thing too initially! I wasn’t sure how I’m going to like the work at first, but it is a new area of engineering to me so I kept an open mind. As I got introduced to what the team’s responsibilities are, the projects they owned, and the problems they faced, I got more excited about working on the team.
+
+Customer support is not an easy task, and it’s no exception at Stripe. After all, other businesses rely on Stripe to make money. Stripe (and competitors) make it really simple for merchants to handle online payments and abstracts away a lot of the complexity that they would otherwise have to handle themselves. However, this means whenever customers run into a problem, the customer support team needs to peak behind the curtains and see exactly what went wrong.
+
+For Stripe, the people that can write in includes:
+
+- Developers (Stripe provides APIs for other companies to integrate with and developers can run into problems)
+- Platform partner users (People using software like Squarespace and Shopify that integrate Stripe on behalf of their users)
+ - Marketplace users (People that interact a marketplace like Lyft or Instacart that integrate with Stripe)
+ - Administrators (Stripe customers running into trouble with moving their money, filing government forms, setting up their Stripe accounts, etc)
+
+There is also a long list of products Stripe offers (7!), and for each product there are different use cases and/or variance in technical implementation. This is a sense of what the scope of customer support is like at Stripe now, and the Frontline Experience team builds meaningful tools to help other Stripes and agents make sense of all of this.
+
+Of course, customer support is not a problem that engineers can solve alone. At Stripe, the effort is driven mainly by the Frontline Experience team and the User Operations teams. The engineering team works on the technical bit, but along the way there are opportunities, even as an engineer, to give input on the overall system. This is what I found most exciting about being part of this team.
+
+## My project: Internationalization for Canned Responses
+
+Before I delve into my project, I should give a little more context on what Lumos generally is. It’s a webapp embedded in all of the agent-facing customer support channel clients (email, chat, phone), designed to help agents accurately answer questions quickly. The tool surfaces customer information and solutions with suggested procedures and appropriate canned responses.
+
+As Stripe’s services expand into new countries, the need for supporting merchants in non-English languages increase. Although Stripe’s agents have been doing well in supporting non-English languages, Lumos doesn't support canned responses well for more than one language. As a temporary workaround, additional canned responses for each different languages were created for the same topic. However, managing them individually and including them into the solutions were complicated.
+
+In practice, each canned response is inlined between some instructions and account data. Here’s what an excerpt of a solution might look like.
+
+```
+---
+Topic: Payouts > Where is my money?
+---
+
+**Account Data: The user does not have an bank account**
+
+If the user does not have a bank account:
+*<Apply Macro: Set up a bank account>*
+
+If the user is not pastw payout schedule:
+*<Apply Macro: Wait 7-10 business days>*
+…
+```
+
+Under the previous version, if a new language variation is needed, we would create a new separate canned response then inline them like so.
+
+```
+Topic: Payouts > Where is my money?
+
+**Account Data: The user does not have an bank account**
+
+If the user does not have a bank account:
+*<Apply Macro: Set up a bank account>*
+*<Apply Macro: Set up a bank account (de)>*
+*<Apply Macro: Set up a bank account (es)>*
+*<Apply Macro: Set up a bank account (it)>*
+*<Apply Macro: Set up a bank account (jp)>*
+
+If the user is not past payout schedule:
+*<Apply Macro: Wait 7-10 business days>*
+*<Apply Macro: Wait 7-10 business days (es)>*
+*<Apply Macro: Wait 7-10 business days (it)>*
+…
+```
+
+You can probably guess how nasty this quickly got. The canned responses are taking up a lot of the precious real-estate Lumos has on the agent's screen. Sometimes these were collapsible with a dropdown menu, but that would introduces an additional click.
+
+The language variations on the same topic should be tied to the same canned response. Ideally, there should only be one button to apply a canned response of the same topic, and the language to actually apply should be determined by a single independent UI element. My project is to essentially implement this into Lumos.
+
+As for the actual implementation, in addition to Lumos, the embedded agent-facing webapp, there's also an internal CMS that is used to manage the Lumos content. The editor and bulk import/export tool on the dashboard will also need to be updated accordingly to support the changes. All of it is built using full-stack technology, the same ones used in the rest of Stripe. To complete my project, I used Ruby, JavaScript, React, a bunch of internal libraries, and Zendesk. While I was working on it, I had help from my mentor and team when I needed it, but I also had the independence to drive design decisions for the implementation of my project.
+
+Fun side note: I used “language” throughout the post to simplify the idea, but in actuality the variations are differentiated by locales, which segments by languages, geography, and any additional preferences. Hong Kong is a real world example of where this nuance come into play. Stripe’s blog post on the Hong Kong expansion here[^0] demonstrates the same language but different locales for readers from Hong Kong and China. In this example, the variations not only differ in script, but also vocabulary, word ordering, tone (as in attitude), etc. By implementing locale variations, we can customize the copy so the users really feel that it was written for them.
+
+## Other things
+
+In addition to product work, there were other things I got to try out. Stripe maintains a mature system for data science, and teams can use it to track events, build dashboards, and make data-driven decisions. It's really powerful, and for the most part straightforward to use. In order to query for data though, I needed to learn SQL, something I've been putting off for a while. Wrapping my head around the data available and figuring out how to use them to validate hypotheses took some getting used to, but I found that it's a useful strategy for prioritizing tasks and picking new projects.
+
+I also wanted to improve my verbal communication, and I was able to practice it at Stripe. After discussing with my mentor about it, I signed up to give the weekly Lumos updates to the greater Leverage team for a couple of the meetings. I thought summarizing my own work was difficult enough, now imagine having to do it on behalf of everyone on your team... I had to be more aware of what my teammates are working on and form summaries for the members who are out of context. I also tend to ramble and forget what I was originally talking about, so I practiced to summarize in a clear and concise manner. At the end of the internship, I gave a presentation about my project to my coworkers. Although public speaking is a soft skill that I still need to practice over time, I appreciate that I had the avenue to practice it during my internship.
+
+## We haven't won yet
+
+All in all, I think I got a lot of out this internship. Working on the Lumos team put me out of my comfort zone and gave me exposure to working on software with different kinds of users. I learned new technical skills, but also about the surrounding tasks and responsibilities that surround the software engineer role. I was placed on a great team, had interesting projects, and worked with a lot of great people with different expertise that I can learn from. It was a pleasure interning at Stripe!
+
+![Some of the 2018 interns who were able to make it to the offsite](./interns2.jpg)  
+
+[^0]: https://stripe.com/blog/hong-kong

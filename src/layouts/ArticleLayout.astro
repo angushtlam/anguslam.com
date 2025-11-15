@@ -1,0 +1,39 @@
+---
+import PageLayout from './PageLayout.astro';
+import Header from '../components/Header';
+import '../styles/markdown.css';
+
+interface Props {
+  title: string;
+  updated: Date;
+}
+
+const { title, updated } = Astro.props;
+
+// Format date like "January 1st, 2024"
+const formatDate = (date: Date) => {
+  const month = date.toLocaleString('en-US', { month: 'long' });
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  const suffix = (day: number) => {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+      case 1: return 'st';
+      case 2: return 'nd';
+      case 3: return 'rd';
+      default: return 'th';
+    }
+  };
+
+  return `${month} ${day}${suffix(day)}, ${year}`;
+};
+
+const formattedDate = formatDate(updated);
+---
+
+<PageLayout title={`${title} | Angus Lam - anguslam.com`}>
+  <Header breadcrumb="blog" client:load>{title}</Header>
+    <slot />
+  <p>Last updated {formattedDate}</p>
+</PageLayout>

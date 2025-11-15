@@ -1,0 +1,52 @@
+---
+title: The case for plain CSS
+published: true
+created: 2021-10-18
+updated: 2021-10-18
+---
+
+Between working on an established codebase or starting out a new side project, it feels like there are so many choices for adding styling to websites nowadays. Plain ol' classic CSS, inline CSS making a comeback, Bootstrap, Tailwind, what about those fancy scoped CSS modules, Sass, PostCSS, CSS-in-JavaScript, do I bundle them or export them into a single CSS file? Multiple CSS files? Analysis paralysis.
+
+The decisions to use these tools feel trapdoor-y. It's especially daunting when there are ambitious plans to build new and exciting projects. It feels like the right time to plan for the future and "do things right the first time".
+
+I'm not going to argue to use no tools, but I am going to make the case to bias against using them unless there's a very clear reason to.
+
+## Unsurprisingly, no silver bullet
+
+CSS, even in 2021, has a somewhat unfair reputation of being finicky, unintuitive, and developer-hostile, as underscored with the plethora of quality CSS memes featuring [Peter Griffin](https://web.archive.org/web/20210223044950/https://www.memecenter.com/fun/1247789/demonstration-of-working-with-css), [Pikachu](https://web.archive.org/web/20210223045251/https://onsizzle.com/i/me-lets-rewrite-the-css-my-website-web-development-is-e64b108c434b4f2cb9fff9d5797d2eda), and [even original comics](https://web.archive.org/web/20210223045040/https://vincentdnl.com/drawings/centering-a-div/).
+
+Plenty of tools exist and work really well, but only for the problems they address. Unfortunately, there isn't anything that just generally makes styling better or right.
+
+Generally, CSS has four major categories of complementary tools. Keep in mind some can be argued to fit in multiple categories.
+
+- CSS frameworks ([Bootstrap](https://getbootstrap.com/), [Tailwind](https://tailwindcss.com/)) - These bring opinionated styling and naming conventions to a project. Designed to get to a reasonable looking website at the expense of some customizability.
+- Transpilers ([PostCSS](https://postcss.org/), [Sass](https://sass-lang.com/)) - These add new features to the CSS written in a project.
+- CSS-in-JavaScript libraries ([Emotion](https://emotion.sh/), [Linaria](https://github.com/callstack/linaria), [JSS](https://cssinjs.org/), [CSS modules](https://github.com/css-modules/css-modules)) - These are utilities that allow developers to write CSS closer to JavaScript logic, allowing for related logic to be kept closer together in a codebase.
+- Methodology ([BEM](http://getbem.com/), roll your own) - These are philosophies on how CSS should be organized in a codebase.
+Whenever a new tool is introduced to a codebase, it becomes a dependency of the project. Usually, dependencies are difficult to remove, and it's no different with CSS.
+
+Unfortunately with CSS, it has an added tendency of turning into spaghetti without some discipline. Some common pitfalls like the lack of namespacing, conflicting cascading styles, unintended inheritance, and using !important can quickly make CSS hard to reason.
+
+These are some principles that are useful to justify using one or more of those tools.
+
+- Productivity - The most simple. Will using this tool allow getting work done (ideally many multiples) faster?
+- Maintainability - Is the tool easy to maintain and simple to reason about, especially when introducing new people to the codebase? Will this also turn into a different kind of spaghetti?
+- Portability - Will the styles be used on multiple websites and web apps that don't share the same application frameworks?
+- Reversibility - Will it be difficult to remove or refactor if the tool ends up insufficient or unsuited for the use cases?
+The tradeoffs aren't between CSS tool to CSS tool, it's comparing it to the browser-spec'd CSS. Something in common for the principles except productivity is that the justification of the tool is usually very minimal on smaller projects.
+
+## Just write plain CSS
+Especially when starting out, there's nothing wrong with writing a plain old CSS stylesheet.
+
+- It (depends on what's getting built, but usually) is productive to just start building rather than figuring out which concoction of tools to use and configuring them to work.
+- Descriptive naming and precise selectors are usually enough to keep the styles maintainable, and any frontend developer should be able to understand and be immediately productive with plain CSS.
+- CSS is browser-native, so it's compatible and easily portable between any web framework, component or not.
+- CSS is the baseline, there's nothing to reverse.
+- Building design systems and frameworks are cool and all, but make sure they are prepared with the products built tomorrow or at least are malleable enough to support them without much growing pains. Styling redesigns, new features, and new design patterns occur often, and at these points the option to scrap and rebuild can appear attractive. The choice is likely easy, but ripping out an old over-engineered system without breaking anything is no fun.
+
+A few hypothetical examples as food for thought:
+
+- There is a deadline on getting [insert your very important project] out the door. If using a framework like Bootstrap is going to make completing it manageable, it's possibly worth the additional baggage it might bring on the application (or to spend time removing unused features later).
+- If the same styles are intended to be shared between a non-React based CMS and a React dashboard, it might be a bad idea to build styles using a React-based CSS-in-JavaScript library.
+- The codebase is massive and the common flows and layouts have varying degrees of consistency. This would be a good time to use a methodology, create components, and/or use CSS-in-JavaScript libraries.
+- If the tool is no longer shiny or became obsolete, how much work does it take to rip it out?

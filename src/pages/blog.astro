@@ -1,0 +1,47 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Header from '../components/Header';
+---
+
+<PageLayout title="All blog posts | Angus Lam - anguslam.com">
+  <Header client:load>All blog posts</Header>
+  <p>
+    I'm slowly moving my writing to{" "}
+    <a href="https://angushtlam.substack.com">Substack</a>. The best
+    way to keep up is to subscribe to me there!
+  </p>
+  <ul>
+    <li>
+      <a href="/photos-migration">
+        "My migration from iCloud Photos to Google Photos went so terribly
+        that I had to write Python scripts and it still took 80 hours"
+      </a>
+    </li>
+    <li>
+      <a href="/react-native-gotchas">
+        "Gotchas for web developers trying out React Native"
+      </a>
+    </li>
+    <li>
+      <a href="/the-case-for-plain-css">"The case for plain CSS"</a>
+    </li>
+    <li>
+      <a
+        href="https://angushtlam.substack.com/p/building-a-student-tech-community"
+        target="_blank"
+      >
+        "Building a student tech community"
+      </a>{" "}
+      How I organized UB ACM, my alma mater's computer science club, from
+      2017-2019.
+    </li>
+    <li>
+      <a href="/stripe-internship-2018">"My Stripe internship 2018"</a>
+    </li>
+    <li>
+      <a href="/optimizely-internship-2017">
+        "My internship project at Optimizely 2017"
+      </a>
+    </li>
+  </ul>
+</PageLayout>

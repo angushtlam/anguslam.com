@@ -1,11 +1,10 @@
 /*
  * This file is a copy of the stylesheet in leaflet/dist/leaflet.css with some
- * modifications for stylistic choices and image rendering in Gatsby, which
- * doesn't compile the right output based on the file path.
+ * modifications for stylistic choices and image rendering in Astro/Vite.
  */
 
 .leaflet-angus-custom-icon {
-  background-image: url('~leaflet/dist/images/marker-icon.png');
+  background-image: url('/leaflet-images/marker-icon.png');
 }
 
 
@@ -374,12 +373,12 @@ svg.leaflet-image-layer.leaflet-interactive path {
   border-radius: 5px;
 }
 .leaflet-control-layers-toggle {
-  background-image: url('~leaflet/dist/images/layers.png');
+  background-image: url('/leaflet-images/layers.png');
   width: 36px;
   height: 36px;
 }
 .leaflet-retina .leaflet-control-layers-toggle {
-  background-image: url('~leaflet/dist/images/layers-2x.png');
+  background-image: url('/leaflet-images/layers-2x.png');
   background-size: 26px 26px;
 }
 .leaflet-touch .leaflet-control-layers-toggle {

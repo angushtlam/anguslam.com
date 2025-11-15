@@ -1,5 +1,16 @@
+# Dependencies
 node_modules/
-.cache/
-public/
-gatsby-types.d.ts
+
+# Build output
+dist/
+.astro/
+
+# Environment
+.env
+.env.production
+
+# macOS
 .DS_Store
+
+# Astro
+.cache/

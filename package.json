@@ -5,14 +5,16 @@
   "description": "Angus Lam's personal website",
   "author": "Angus Lam",
   "keywords": [
-    "gatsby"
+    "astro"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "dev": "astro dev",
+    "develop": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "serve": "astro preview",
+    "clean": "rm -rf dist .astro",
     "lint": "eslint . --ext md,mdx",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -20,28 +22,24 @@
   },
   "dependencies": {
     "@anthropic-ai/claude-code": "^1.0.30",
-    "@emotion/react": "^11.11.3",
-    "@emotion/styled": "^11.11.0",
-    "gatsby": "^5.13.3",
-    "gatsby-plugin-emotion": "^8.13.1",
-    "gatsby-plugin-image": "^3.13.1",
-    "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-mdx": "^5.13.1",
-    "gatsby-plugin-sharp": "^5.13.1",
-    "gatsby-plugin-sitemap": "^6.13.1",
-    "gatsby-remark-images": "^7.13.1",
-    "gatsby-source-filesystem": "^5.13.1",
-    "gatsby-transformer-sharp": "^5.13.1",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.18",
     "leaflet": "^1.9.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^4.0.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.21",
     "eslint": "^8.56.0",
     "eslint-plugin-mdx": "^3.1.5",
-    "gatsby-cli": "^5.13.2",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
