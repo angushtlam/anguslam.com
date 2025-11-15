@@ -66,10 +66,8 @@ const IndexPage = () => {
           <Link to="/miami">The time I visited Miami in 2022</Link>
         </li>
         <li>
-          <Link to="https://angus.dev" target="_blank">
-            angus.dev
-          </Link>{" "}
-          My day job. I write code for a living.
+          <Link to="https://angus.dev">angus.dev</Link> My day job. I write code
+          for a living.
         </li>
         <li>
           Blog
