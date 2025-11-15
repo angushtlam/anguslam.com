@@ -50,7 +50,7 @@ const IndexPage = () => {
         </li>
         <li>
           <Link to="https://ads.angus.dev/" target="_blank">
-            “The Ads Are Following Me!”
+            The Ads Are Following Me!
           </Link>{" "}
           Visual story website about online advertising and retargeting
         </li>
@@ -61,6 +61,9 @@ const IndexPage = () => {
           Holographic stickers of household items. I designed them and built an
           online store to learn how physical items are sold online. The store
           was rated five stars until I shut it down.
+        </li>
+        <li>
+          <Link to="/miami">The time I visited Miami in 2022</Link>
         </li>
         <li>
           <Link to="https://angus.dev" target="_blank">
@@ -79,7 +82,10 @@ const IndexPage = () => {
               </Link>
             </li>
             <li>
-              <Link to="/building-a-student-tech-community">
+              <Link
+                to="https://angushtlam.substack.com/p/building-a-student-tech-community"
+                target="_blank"
+              >
                 “Building a student tech community”
               </Link>{" "}
               How I organized UB ACM, my alma mater's computer science club,
