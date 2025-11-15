@@ -32,6 +32,7 @@ const MiamiMap: React.FC = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          marginBottom: "20px",
         }}
       >
         Loading map...
@@ -47,7 +48,7 @@ const MiamiMap: React.FC = () => {
       center={center}
       zoom={11}
       scrollWheelZoom={false}
-      style={{ height: "400px" }}
+      style={{ height: "400px", marginBottom: "20px" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

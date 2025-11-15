@@ -19,3 +19,9 @@ h5,
 h6 {
   margin-top: 0;
 }
+
+/* Make all images responsive globally */
+img {
+  max-width: 100%;
+  height: auto;
+}
