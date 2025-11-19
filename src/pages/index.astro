@@ -1,11 +1,13 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import meJpg from '../images/me_small.jpeg';
+import PageLayout from "../layouts/PageLayout.astro";
+import meJpg from "../images/me_small.jpeg";
 ---
 
 <PageLayout>
   <h1>
-    <span style="color: #696969;">Index of /</span><span style="color: #222;">Angus Lam</span>/
+    <span style="color: #696969;">Index of /</span><span style="color: #222;"
+      >Angus Lam</span
+    >/
   </h1>
   <hr />
   <p>
@@ -13,67 +15,144 @@ import meJpg from '../images/me_small.jpeg';
     work here, from a breadth of my interests, hobbies, adventures, and
     brainworms.
   </p>
-  <img
-    alt="Picture of Angus Lam"
-    style="max-height: 350px; max-width: 100%;"
-    src={meJpg.src}
-  />
-  <ul>
-    <li>
-      <a href="https://moodboring.com" target="_blank">
-        Moodboring
-      </a>{" "}
-      Browser-based photo editor with a lot of <em>(my)</em> personality
-    </li>
-    <li>
-      <a href="/items">Personal item log</a> An experiment in
-      maintaining a catalog of personal belongings
-    </li>
-    <li>
-      <a href="https://ads.angus.dev/" target="_blank">
-        The Ads Are Following Me!
-      </a>{" "}
-      Visual story website about online advertising and retargeting
-    </li>
-    <li>
-      <a href="https://kindredunspirits.com" target="_blank">
-        Kindred Unspirits
-      </a>{" "}
-      Holographic stickers of household items. I designed them and built an
-      online store to learn how physical items are sold online. The store
-      was rated five stars until I shut it down.
-    </li>
-    <li>
-      <a href="/miami">The time I visited Miami in 2022</a>
-    </li>
-    <li>
-      <a href="https://angus.dev">angus.dev</a> My day job. I write code
-      for a living.
-    </li>
-    <li>
-      Blog
-      <ul>
-        <li>
-          <a href="/photos-migration">
-            "My migration from iCloud Photos to Google Photos went so
-            terribly that I had to write Python scripts and it still took 80
-            hours"
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://angushtlam.substack.com/p/building-a-student-tech-community"
-            target="_blank"
-          >
-            "Building a student tech community"
-          </a>{" "}
-          How I organized UB ACM, my alma mater's computer science club,
-          from 2017-2019.
-        </li>
-        <li>
-          <a href="/blog">See all posts…</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <p>
+    <img
+      alt="Picture of Angus Lam"
+      style="max-height: 300px; max-width: 100%;"
+      src={meJpg.src}
+    />
+  </p>
+  <div class="flex-table">
+    <div class="flex-row">
+      <div class="flex-cell link-cell">../</div>
+      <div class="flex-cell description-cell"></div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="https://ads.angus.dev/" target="_blank">
+          The Ads Are Following Me!
+        </a>
+      </div>
+      <div class="flex-cell description-cell">
+        Visual story website about online advertising and retargeting.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="/items">Personal item log</a>
+      </div>
+      <div class="flex-cell description-cell">
+        An experiment in maintaining a catalog of personal belongings.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="https://moodboring.com" target="_blank">Moodboring</a>
+      </div>
+      <div class="flex-cell description-cell">
+        Browser-based photo editor with a lot of (my) personality.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="https://kindredunspirits.com" target="_blank">
+          Kindred Unspirits
+        </a>
+      </div>
+      <div class="flex-cell description-cell">
+        Holographic stickers of household items. I designed them and built an
+        online store to learn how physical items are sold online. The store was
+        rated five stars until I shut it down.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="/miami">The time I visited Miami in 2022</a>
+      </div>
+      <div class="flex-cell description-cell">
+        Research of neighborhoods and places I found interesting to visit.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="https://postcards.anguslam.com" target="_blank"
+          >Angus's Autumnal Amtrak Adventure 2023</a
+        >
+      </div>
+      <div class="flex-cell description-cell">
+        Postcards created during my train travels.
+      </div>
+    </div>
+    <div class="flex-row empty-row"></div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="https://angus.dev">angus.dev</a>
+      </div>
+      <div class="flex-cell description-cell">
+        My day job. I write code for a living.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="/blog">Blog</a>
+      </div>
+      <div class="flex-cell description-cell">
+        I write about my experiences and observations. Some are below.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a
+          href="https://angushtlam.substack.com/p/building-a-student-tech-community"
+          target="_blank"
+        >
+          "Building a student tech community"
+        </a>
+      </div>
+      <div class="flex-cell description-cell">
+        How I organized UB ACM, my alma mater's computer science club, from
+        2017-2019.
+      </div>
+    </div>
+    <div class="flex-row">
+      <div class="flex-cell link-cell">
+        <a href="/photos-migration">
+          "My migration from iCloud Photos to Google Photos went so terribly
+          that I had to write Python scripts and it still took 80 hours"
+        </a>
+      </div>
+      <div class="flex-cell description-cell"></div>
+    </div>
+  </div>
 </PageLayout>
+
+<style>
+  .flex-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 650px;
+  }
+
+  .flex-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .flex-cell {
+    display: flex;
+  }
+
+  .link-cell {
+    flex: 0 0 auto;
+    min-width: 300px;
+  }
+
+  .description-cell {
+    flex: 1;
+  }
+
+  .empty-row {
+    height: 20px;
+  }
+</style>
